@@ -36,6 +36,7 @@ header {
     box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     border-bottom: 5px solid white;
     background-color: black;
+
 }
 
 
@@ -189,7 +190,7 @@ nav {
     min-height: calc(200px - var(--navbar-height));
     width:100%;
     transform:translate(0%, var(--navbar-height));
-    text-shadow: 0px 0px 50px rgba(0,0,0,0.6);
+    text-shadow: 0px 0px 50px rgba(0,0,0,0.6); 
 }
 
 .logotext h1 {

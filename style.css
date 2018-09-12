@@ -25,6 +25,7 @@ body {
 header {
     width: 100%;
     height: var(--header-height);
+    min-height: 200px;
     background: url(bg.jpg) no-repeat;
     background-size: cover;
     background-position: center 60%;
@@ -35,8 +36,8 @@ header {
     box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     border-bottom: 5px solid white;
     background-color: black;
-
 }
+
 
 .menu {
     top: 0;
@@ -185,25 +186,31 @@ nav {
     background-color: rgba(0, 0, 0, 0.3);
     background-size: 100;
     height: calc(var(--header-height) - var(--navbar-height));
+    min-height: calc(200px - var(--navbar-height));
     width:100%;
     transform:translate(0%, var(--navbar-height));
     text-shadow: 0px 0px 50px rgba(0,0,0,0.6);
 }
 
 .logotext h1 {
+
     margin: 0;
     padding: 0;
-    line-height: calc(var(--header-height) - var(--navbar-height));
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 5vw;
+    height: 0;
+    line-height: 0;
 }
 
 .logotext h2 {
-    margin: 0;
-    padding: 0;
-    margin-top: -5vw;
+    height: 0;
     line-height: 0;
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
     font-size: 2vw;
-    animation: 2s;
 }
 
 .darknavbar {
@@ -221,7 +228,7 @@ nav {
 
     background-color: rgba(242, 242, 240, 0.7);
     color: black;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 10px 0px 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;

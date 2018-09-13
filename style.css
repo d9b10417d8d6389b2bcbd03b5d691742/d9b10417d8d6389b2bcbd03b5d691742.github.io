@@ -154,31 +154,6 @@ header {
     margin-right: 10px;
 }
 
-@media(max-width: 786px) {
-    
-    .menuicon {
-    display: block;
-    }
-    
-    .menu li {
-    margin-right: 0;
-    display: block;
-    text-align: center;
-
-
-    }
-    
-    .menu {
-        height: 0px;
-        margin-top: var(--navbar-height);
-        transition: 1s;
-    }
-    
-    .menuopen {
-        height: calc(var(--navbar-height) * var(--navbar-count));
-    }
-}
-
 nav {
     top: 0;
     padding: 0;
@@ -267,4 +242,31 @@ footer {
     line-height: 10px;
     font-size: 10px;
     color: aqua;
+}
+
+@media(max-width: 786px) {
+    
+    .whitepage {
+        background-image: none;
+    }
+    
+    .menuicon {
+    display: block;
+    }
+    
+    .menu li {
+    margin-right: 0;
+    display: block;
+    text-align: center;
+    }
+    
+    .menu {
+        height: 0px;
+        margin-top: var(--navbar-height);
+        transition: 1s;
+    }
+    
+    .menuopen {
+        height: calc(var(--navbar-height) * var(--navbar-count));
+    }
 }

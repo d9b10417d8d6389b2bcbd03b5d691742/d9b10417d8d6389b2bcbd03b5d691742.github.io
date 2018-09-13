@@ -1,13 +1,14 @@
 :root {
     --navbar-height: 50px;
     --navbar-count: 4;
-    --header-height: 25vw;
+    --header-height: 200PX;
 }
 
 html, body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    user-select:none;
 }
 
 body {
@@ -25,20 +26,32 @@ body {
 header {
     width: 100%;
     height: var(--header-height);
-    min-height: 200px;
-    background: url(bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center 60%;
+    background: url(bg4.png) no-repeat 100% 40%;
     text-align: center;
+    background-size: cover;
     line-height: calc(400px + var(--navbar-height));
     font-family: fantasy;
     box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
     box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     border-bottom: 5px solid white;
     background-color: black;
-
+    animation: day-night 10s ease infinite;
 }
 
+@keyframes day-night {
+    0% {
+        background: url(bg4.png) no-repeat 100% 40%;
+        background-size: cover;
+    }
+    50%{
+        background: url(bg2.png) no-repeat 100% 40%;
+        background-size: cover;
+    }
+    100% {
+        background: url(bg4.png) no-repeat 100% 40%;
+        background-size: cover;
+    }
+}
 
 .menu {
     top: 0;
@@ -68,8 +81,8 @@ header {
 }
 
 .menu li a:hover {
-    color: green; 
-    text-shadow: 0px 0px 20px rgba(0, 128, 0 , 1);
+    color: royalblue; 
+    text-shadow: 0px 0px 20px royalblue;
 }
 
 .currentpage {
@@ -97,7 +110,6 @@ header {
 
 .logoicon:hover{
     animation: rotation 500ms ease-out;
-    
 }
 
 @keyframes rotation {
@@ -129,7 +141,6 @@ header {
     line-height: var(--navbar-height);
     display: none;
     transition: 1s;
-
 }
 
 .menuicon a {
@@ -184,17 +195,15 @@ nav {
 
 .logotext {
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.3);
+/*    background-color: rgba(0, 0, 0, 0.3);*/
     background-size: 100;
     height: calc(var(--header-height) - var(--navbar-height));
-    min-height: calc(200px - var(--navbar-height));
     width:100%;
     transform:translate(0%, var(--navbar-height));
-    text-shadow: 0px 0px 50px rgba(0,0,0,0.6); 
+    text-shadow: 0px 0px 50px rgba(0,0,0,0.6);
 }
 
 .logotext h1 {
-
     margin: 0;
     padding: 0;
     position: relative;
@@ -212,6 +221,13 @@ nav {
     top: 60%;
     transform: translateY(-50%);
     font-size: 2vw;
+    animation: txtmovein 1s ease;
+}
+
+@keyframes txtmovein {
+    0% {
+        font-size: 0vw;
+    }
 }
 
 .darknavbar {
@@ -226,15 +242,17 @@ nav {
 }
 
 .whitepage {
-
-    background-color: rgba(242, 242, 240, 0.7);
+    background-blend-mode:screen;
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
     margin: 0px 10px 0px 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;
-
 }
+
 
 footer {
     height: 100px;

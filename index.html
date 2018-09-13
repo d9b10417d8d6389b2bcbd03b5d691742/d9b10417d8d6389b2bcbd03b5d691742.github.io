@@ -57,27 +57,19 @@
                         $(".menuicon").children().on("click", function() {
                             $(".menu").toggleClass("menuopen");
                         })
-                        var scTop = $(window).scrollTop()
-                        //$("header").css("background-position", "center " +(-10 + (scTop / 30))+ "em");
-                        $(".pagenametext").hide().fadeIn(2000);
                   }
                  );
                 
-
                 $(window).on("scroll", function() {
-                    
                     var scTop = $(window).scrollTop()
-                    
-                    if(scTop > 300) {
+                    if(scTop > 100) {
                         $("nav").addClass("darknavbar");
                     } else {
                         $("nav").removeClass("darknavbar");
                     }
-                    $("body").css("background-position", "center " +(scTop * 0.6)+ "px");
-                    //$("header").css("background-position", "center " +(-10 + (scTop / 30))+ "em");
-                });
+                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
 
-                
+                });
                 
             </script>
 

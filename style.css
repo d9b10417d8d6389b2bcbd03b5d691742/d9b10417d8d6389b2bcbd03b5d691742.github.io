@@ -20,7 +20,7 @@ body {
     color: aliceblue;
     line-height: 100px;
     background: url(tray.png);
-        font-family: Anton, monospace;
+	font-family: Anton, monospace;
 }
 
 header {

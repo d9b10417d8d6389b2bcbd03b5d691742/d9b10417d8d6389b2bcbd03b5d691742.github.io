@@ -18,9 +18,9 @@ body {
     background-position: center 20%;
     text-align: center;
     color: aliceblue;
-    font-family: fantasy;
     line-height: 100px;
     background: url(tray.png);
+        font-family: Anton, monospace;
 }
 
 header {
@@ -30,7 +30,7 @@ header {
     text-align: center;
     background-size: cover;
     line-height: calc(400px + var(--navbar-height));
-    font-family: fantasy;
+    
     box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
     box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     border-bottom: 5px solid white;
@@ -197,6 +197,7 @@ nav {
     transform: translateY(-50%);
     font-size: 2vw;
     animation: txtmovein 1s ease;
+    
 }
 
 @keyframes txtmovein {
@@ -226,6 +227,7 @@ nav {
     border-radius: 8px;
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;
+    font-family: Geo, monospace;
 }
 
 
@@ -251,13 +253,13 @@ footer {
     }
     
     .menuicon {
-    display: block;
+        display: block;
     }
     
     .menu li {
-    margin-right: 0;
-    display: block;
-    text-align: center;
+        margin-right: 0;
+        display: block;
+        text-align: center;
     }
     
     .menu {

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="texture/cjicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Geo|Rubik:900|Press+Start+2P|Anton" rel="stylesheet">
+        <!-- HTML Meta Tags -->
+		<title>CommandJam | Home</title>
+		<meta name="description" content="Minecraft Ony One Commands">
+		
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="CommandJam | Home">
+		<meta itemprop="description" content="Minecraft Ony One Commands">
+		<meta itemprop="image" content="texture/siteindex.jpg">
+		
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="commandjam">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="CommandJam – Website">
+		<meta property="og:description" content="Minecraft Ony One Commands">
+		<meta property="og:image" content="texture/siteindex.jpg">
+		
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="CommandJam – Website">
+		<meta name="twitter:description" content="Minecraft Ony One Commands">
+		<meta name="twitter:image" content="texture/siteindex.jpg">
+        
+    </head>
+    
+    <body>
+        <header>
+            
+            <div class="logotext">
+                <h1>CommandJam</h1>
+                <h2 class="pagenametext">Welcome!</h2>
+            </div>
+        <nav>
+
+            <ul class="menu">
+                <li class="currentpage"><a href="/index">Home</a></li>
+                <li><a href="/creations">Creations</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/faq">FAQ</a></li>
+
+            </ul>
+            <div class="navtext">CommandJam</div>
+            <div class="menuicon"><a>...</a></div>
+            <div class="logoicon"></div>
+            <script>
+                
+                $(function() {
+                        $(".menuicon").children().on("click", function() {
+                            $(".menu").toggleClass("menuopen");
+                        })
+                  }
+                 );
+                
+                $(window).on("scroll", function() {
+                    var scTop = $(window).scrollTop()
+                    if(scTop > 100) {
+                        $("nav").addClass("darknavbar");
+                    } else {
+                        $("nav").removeClass("darknavbar");
+                    }
+                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+
+                });
+                
+            </script>
+
+        </nav>
+
+        </header>
+        <content>
+            <div class="scrollcontent">
+                
+                <div class="whitepage">
+                
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                <h3>TEXT</h3><h3>TEXT</h3>
+                <h3>TEXTfskjvn fskj xvkjnfksdjn fsdkj ndfébnlk éncvlkbnd</h3>
+                <h3>TEXT</h3>
+                <h3>TEXT</h3>
+                <h3>TEXT</h3>
+                <h3>TEXT</h3>
+                <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3><h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                    <h3>TEXT</h3>
+                </div>
+            </div>
+        </content>
+        <footer>
+
+            <br>Copyright &#169; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> CommandJam - All Rights Reserved. <br> This website is not endorsed by, associated or affiliated with <a target="_blank" rel="noopener noreferrer" href="https://mojang.com/">Mojang AB</a>.<br><br>
+            
+        </footer>
+    </body>
+    
+</html>

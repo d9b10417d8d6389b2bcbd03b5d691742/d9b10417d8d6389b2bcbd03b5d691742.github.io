@@ -31,6 +31,46 @@
 		<meta name="twitter:description" content="Minecraft Ony One Commands">
 		<meta name="twitter:image" content="texture/siteindex.jpg">
         
+
+        <!-----LOAD CREATION CONTENT----->
+        <script>
+            $(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "data.xml",
+                    success: dataLoader
+                });
+            });
+            function dataLoader (xml) {
+                $(document).attr("title", "CommandJam | " + $(xml).find("tag").text());
+                $(".pagenametext").text($(xml).find("tag").text());
+            }
+        </script>
+        <!------------------------------->
+        
+        <script>
+                
+            $(function() {
+                $(".menuicon").children().on("click", function() {
+                $(".menu").toggleClass("menuopen");
+            });
+            var scTop = $(window).scrollTop();
+            $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+                  }
+                 );
+                
+            $(window).on("scroll", function() {
+                var scTop = $(window).scrollTop();
+                if(scTop > 100) {
+                    $("nav").addClass("darknavbar");
+                } else {
+                    $("nav").removeClass("darknavbar");
+                }
+                $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+                });
+                
+            </script>
+        
     </head>
     
     <body>
@@ -38,7 +78,7 @@
             
             <div class="logotext">
                 <h1>CommandJam</h1>
-                <h2 class="pagenametext">creations!</h2>
+                <h2 class="pagenametext"></h2>
             </div>
         <nav>
 
@@ -52,27 +92,7 @@
             <div class="navtext">CommandJam</div>
             <div class="menuicon"><a>...</a></div>
             <div class="logoicon"></div>
-            <script>
-                
-                $(function() {
-                        $(".menuicon").children().on("click", function() {
-                            $(".menu").toggleClass("menuopen");
-                        })
-                  }
-                 );
-                
-                $(window).on("scroll", function() {
-                    var scTop = $(window).scrollTop()
-                    if(scTop > 100) {
-                        $("nav").addClass("darknavbar");
-                    } else {
-                        $("nav").removeClass("darknavbar");
-                    }
-                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
 
-                });
-                
-            </script>
 
         </nav>
 
@@ -81,25 +101,11 @@
             <div class="scrollcontent">
                 
                 <div class="whitepage">
-                
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                <h3>TEXT</h3><h3>TEXT</h3>
-                <h3>TEXTfskjvn fskj xvkjnfksdjn fsdkj ndfébnlk éncvlkbnd</h3>
-                <h3>TEXT</h3>
-                <h3>TEXT</h3>
-                <h3>TEXT</h3>
-                <h3>TEXT</h3>
-                <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3><h3>TEXT</h3>
-                    <h3>TEXT</h3>
-                    <h3>TEXT</h3>
+
+                    <h3>title</h3>
+                    <h3>description</h3>
+                    <h3>other content</h3>
+                    
                 </div>
             </div>
         </content>

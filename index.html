@@ -44,7 +44,7 @@
 
             <ul class="menu">
                 <li class="currentpage"><a href="/index">Home</a></li>
-                <li><a href="/creations">Creations</a></li>
+                <li><a href="/creation">Creations</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/faq">FAQ</a></li>
 
@@ -57,12 +57,14 @@
                 $(function() {
                         $(".menuicon").children().on("click", function() {
                             $(".menu").toggleClass("menuopen");
-                        })
+                        });
+                        var scTop = $(window).scrollTop();
+                        $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
                   }
                  );
                 
                 $(window).on("scroll", function() {
-                    var scTop = $(window).scrollTop()
+                    var scTop = $(window).scrollTop();
                     if(scTop > 100) {
                         $("nav").addClass("darknavbar");
                     } else {
@@ -82,7 +84,7 @@
                 
                 <div class="whitepage">
                 
-                    <h3>TEXT</h3>
+                                        <h3>TEXT</h3>
                     <h3>TEXT</h3>
                     <h3>TEXT</h3>
                     <h3>TEXT</h3>
@@ -100,6 +102,7 @@
                     <h3>TEXT</h3><h3>TEXT</h3>
                     <h3>TEXT</h3>
                     <h3>TEXT</h3>
+
                 </div>
             </div>
         </content>

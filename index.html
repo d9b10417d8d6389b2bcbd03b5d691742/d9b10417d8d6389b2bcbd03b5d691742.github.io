@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/content.css">
         <link rel="icon" href="texture/cjicon.png">
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Geo|Rubik:900|Press+Start+2P|Anton" rel="stylesheet">
         <!-- HTML Meta Tags -->
@@ -31,8 +32,31 @@
 		<meta name="twitter:description" content="Minecraft Ony One Commands">
 		<meta name="twitter:image" content="texture/siteindex.jpg">
         
+        <script>
+            
+            $(function() {
+                    $(".menuicon").children().on("click", function() {
+                        $(".menu").toggleClass("menuopen");
+                    });
+                    var scTop = $(window).scrollTop();
+                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+              }
+             );
+            
+            $(window).on("scroll", function() {
+                var scTop = $(window).scrollTop();
+                if(scTop > 100) {
+                    $("nav").addClass("darknavbar");
+                } else {
+                    $("nav").removeClass("darknavbar");
+                }
+                $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+
+            });
+            
+        </script>
+        
     </head>
-    
     <body>
         <header>
             
@@ -41,50 +65,23 @@
                 <h2 class="pagenametext">Welcome!</h2>
             </div>
         <nav>
-
             <ul class="menu">
                 <li class="currentpage"><a href="/index">Home</a></li>
                 <li><a href="/creation">Creations</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/faq">FAQ</a></li>
-
             </ul>
             <div class="navtext">CommandJam</div>
             <div class="menuicon"><a>...</a></div>
             <div class="logoicon"></div>
-            <script>
-                
-                $(function() {
-                        $(".menuicon").children().on("click", function() {
-                            $(".menu").toggleClass("menuopen");
-                        });
-                        var scTop = $(window).scrollTop();
-                        $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
-                  }
-                 );
-                
-                $(window).on("scroll", function() {
-                    var scTop = $(window).scrollTop();
-                    if(scTop > 100) {
-                        $("nav").addClass("darknavbar");
-                    } else {
-                        $("nav").removeClass("darknavbar");
-                    }
-                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
-
-                });
-                
-            </script>
-
         </nav>
-
         </header>
         <content>
             <div class="scrollcontent">
-                
                 <div class="whitepage">
                 
                                         <h3>TEXT</h3>
+                    <button>adevkjbskjvb</button>
                     <h3>TEXT</h3>
                     <h3>TEXT</h3>
                     <h3>TEXT</h3>
@@ -108,7 +105,7 @@
         </content>
         <footer>
 
-            <br>Copyright &#169; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> CommandJam - All Rights Reserved. <br> This website is not endorsed by, associated or affiliated with <a target="_blank" rel="noopener noreferrer" href="https://mojang.com/">Mojang AB</a>.<br><br>
+            <br>Copyright &#169; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> CommandJam - All Rights Reserved. <br> This website is not endorsed by, associated or affiliated with <a target="_blank" rel="noopener noreferrer" href="https://mojang.com/" class="link">Mojang AB</a>.<br><br>
             
         </footer>
     </body>

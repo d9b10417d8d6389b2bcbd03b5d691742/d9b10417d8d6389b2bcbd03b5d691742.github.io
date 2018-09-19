@@ -7,8 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/content.css">
         <link rel="icon" href="texture/cjicon.png">
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Geo|Rubik:900|Press+Start+2P|Anton" rel="stylesheet">
+        
         <!-- HTML Meta Tags -->
 		<title>CommandJam | Home</title>
 		<meta name="description" content="Minecraft Ony One Commands">
@@ -37,13 +39,14 @@
             $(function() {
                 $.ajax({
                     type: "GET",
-                    url: "data.xml",
+                    url: "xml/data.xml",
                     success: dataLoader
                 });
             });
             function dataLoader (xml) {
-                $(document).attr("title", "CommandJam | " + $(xml).find("tag").text());
-                $(".pagenametext").text($(xml).find("tag").text());
+                $(document).attr("title", "CommandJam | " + $(xml).find("name").text());
+                $(".pagenametext").text($(xml).find("name").text());
+                $(".commandbox").text($(xml).find("command").text());
             }
         </script>
         <!------------------------------->
@@ -51,6 +54,7 @@
         <script>
                 
             $(function() {
+                $(".codeclaim").hide();
                 $(".menuicon").children().on("click", function() {
                 $(".menu").toggleClass("menuopen");
             });
@@ -68,6 +72,18 @@
                 }
                 $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
                 });
+            
+            function CopyCommand() {
+                $(".commandbox").focus().select();
+                document.execCommand("copy");
+                $(".commandbox");
+            };
+            
+            function GetCommand() {
+                if ($(".acceptterms").is(":checked")) {
+                    $(".codeclaim").slideDown();
+                }
+            };
                 
             </script>
         
@@ -99,19 +115,29 @@
         </header>
         <content>
             <div class="scrollcontent">
-                
                 <div class="whitepage">
 
                     <h3>title</h3>
                     <h3>description</h3>
-                    <h3>other content</h3>
+                    <button>wejcgvwejcvjwecvwjec</button>
+                    <button onclick="GetCommand()">Get The Code</button>
+                    <input type="checkbox" class="acceptterms">
+                    <div class="codeclaimspace">
+                         <div class="codeclaim">
+                             <div>
+                                 <button onclick="CopyCommand()">Copy To Clipboard</button>
+                             </div>
+                             <textarea readonly class="commandbox"></textarea>
+                         </div>
+                    </div>
+                    <h3>title</h3>
                     
                 </div>
             </div>
         </content>
         <footer>
 
-            <br>Copyright &#169; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> CommandJam - All Rights Reserved. <br> This website is not endorsed by, associated or affiliated with <a target="_blank" rel="noopener noreferrer" href="https://mojang.com/">Mojang AB</a>.<br><br>
+            <br>Copyright &#169; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> CommandJam - All Rights Reserved. <br> This website is not endorsed by, associated or affiliated with <a target="_blank" rel="noopener noreferrer" href="https://mojang.com/" class="link">Mojang AB</a>.<br><br>
             
         </footer>
     </body>

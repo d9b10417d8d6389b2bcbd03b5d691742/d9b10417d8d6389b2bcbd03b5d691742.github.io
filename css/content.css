@@ -14,22 +14,25 @@ button {
 .codeclaim {
     display: block;
     position: static;
-    width: 100%;
-    padding: 0;
+    max-width: 100%;
     margin: auto;
     border-radius: 3px;
     line-height: 0px;
     height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+
 }
 .codeclaimspace {
     display: block;
     position: static;
-    width: 500px;
+    max-width: 510px;
     padding: 0;
     margin: auto;
     border-radius: 8px;
     line-height: 0px;
     height: 150px;
+    
 }
 
 .codeclaim button {
@@ -39,7 +42,7 @@ button {
 .commandbox {
     background-color: transparent;
     resize: none;
-    height: 48%;
+    height: 60%;
     width: 99%;
     border: none;
     border-bottom: 5px solid var(--blue);

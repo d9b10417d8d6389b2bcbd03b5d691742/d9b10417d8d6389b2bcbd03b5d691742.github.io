@@ -6,7 +6,7 @@ $(function() {
             url: "xml/" + URLtag[1] + ".xml",
             success: dataLoader
         });
-    };
+    }
 });
 
 function dataLoader (xml) {
@@ -14,4 +14,4 @@ function dataLoader (xml) {
     $(".pagenametext").text($(xml).find("name").text());
     $(".commandbox").text($(xml).find("command").text());
     $(".codeclaim").hide();
-}
+};

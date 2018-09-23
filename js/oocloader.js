@@ -1,9 +1,12 @@
 $(function() {
-    $.ajax({
-        type: "GET",
-        url: "xml/data.xml",
-        success: dataLoader
-    });
+    var URLtag = window.location.search.substring(1).split("=");
+    if (URLtag[0] == "") {
+        $.ajax({
+            type: "GET",
+            url: "xml/" + URLtag[1] + ".xml",
+            success: dataLoader
+        });
+    };
 });
 
 function dataLoader (xml) {

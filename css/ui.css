@@ -89,15 +89,6 @@ button:active::after{
     transition: 0s;
 }
 
-.link {
-    color: var(--gray);
-    transition: 0.2s;
-}
-
-.link:hover{
-    color: var(--blue);
-}
-
 .checkboxdiv {
     height: 40px;
     width: 40px;
@@ -127,8 +118,8 @@ input[type="checkbox"] {
     stroke: white;
     stroke-width: 3px;
     stroke-linecap: round;
-    stroke-dasharray: 240%;
-    stroke-dashoffset: -72%;
+    stroke-dasharray: 250%;
+    stroke-dashoffset: -71%;
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.99);
     height: 50px;
     width: 50px;

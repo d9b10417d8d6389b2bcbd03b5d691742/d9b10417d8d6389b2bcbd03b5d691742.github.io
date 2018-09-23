@@ -7,5 +7,6 @@ function CopyCommand() {
 function GetCommand() {
     if ($(".acceptterms").is(":checked")) {
         $(".codeclaim").slideDown();
+        $(".acceptterms").attr("disabled", true);
     }
 };

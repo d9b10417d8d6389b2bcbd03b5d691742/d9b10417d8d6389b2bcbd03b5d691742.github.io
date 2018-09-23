@@ -5,12 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/content.css">
         <link rel="icon" href="texture/cjicon.png">
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Geo|Rubik:900|Press+Start+2P|Anton" rel="stylesheet">
-        <!-- HTML Meta Tags -->
 		<title>CommandJam | Home</title>
 		<meta name="description" content="Minecraft Ony One Commands">
 		
@@ -32,30 +28,10 @@
 		<meta name="twitter:description" content="Minecraft Ony One Commands">
 		<meta name="twitter:image" content="texture/siteindex.jpg">
         
-        <script>
-            
-            $(function() {
-                    $(".menuicon").children().on("click", function() {
-                        $(".menu").toggleClass("menuopen");
-                    });
-                    var scTop = $(window).scrollTop();
-                    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
-              }
-             );
-            
-            $(window).on("scroll", function() {
-                var scTop = $(window).scrollTop();
-                if(scTop > 100) {
-                    $("nav").addClass("darknavbar");
-                } else {
-                    $("nav").removeClass("darknavbar");
-                }
-                $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
-
-            });
-            
-        </script>
-        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ui.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <header>

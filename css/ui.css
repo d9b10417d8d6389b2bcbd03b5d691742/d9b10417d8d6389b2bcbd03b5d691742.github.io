@@ -1,0 +1,145 @@
+:root {
+    --black: #111215;
+    --blue: rgba(48, 107, 172, 1);
+    --gray: rgba(71, 68, 72, 1);
+}
+
+button:focus, input[type="checkbox"]:focus, .commandbox:focus {
+    outline: 0;
+}
+
+.codeclaim {
+    display: block;
+    position: static;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 3px;
+    line-height: 0px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.codeclaimspace {
+    display: block;
+    position: static;
+    max-width: 510px;
+    padding: 0;
+    margin: auto;
+    border-radius: 8px;
+    line-height: 0px;
+    height: 150px;
+    
+}
+
+.codeclaim button {
+    width: 100%;
+}
+
+.commandbox {
+    background-color: transparent;
+    resize: none;
+    height: 60%;
+    width: 99%;
+    border: none;
+    border-bottom: 5px solid var(--blue);
+    font-size: 10px;
+}
+.commandbox::selection{
+    background-color: rgba(0,0,0,0.09);
+}
+
+button {
+    font-family: Geo, monospace;
+    font-size: 20px;
+    box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    position: relative;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    text-align: center;
+    transition: 0.4s ease-out;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:hover {
+    border-radius: 50px;
+}
+
+button::after {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0%;
+    top: 0%;
+    border-radius: 50px;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+button:active::after{
+    width: 0%;
+    right: 50%;
+    opacity: 0.5;
+    transition: 0s;
+}
+
+.link {
+    color: var(--gray);
+    transition: 0.2s;
+}
+
+.link:hover{
+    color: var(--blue);
+}
+
+.checkboxdiv {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin: auto;
+    line-height: 0;
+    border: 5px solid var(--blue);
+    border-radius: 50%;
+    background-color: var(--blue);
+    transform: rotateY(180deg) scaleY(0.6) scalex(0.6);
+}
+
+input[type="checkbox"] {
+    display: block;
+    position: relative;
+    border: none;
+    margin: 0;
+    height: 100%;
+    width: 100%; 
+    -webkit-appearance: none;
+    z-index: 1;
+}
+
+.checkboxsvg {
+    position: relative;
+    fill:var(--blue);
+    stroke: white;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 240%;
+    stroke-dashoffset: -72%;
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.99);
+    height: 50px;
+    width: 50px;
+    top: -45px;
+    left: -5px;
+}
+input[type="checkbox"]:hover + label .checkboxsvg {
+    stroke-width: 5px;
+}
+
+input[type="checkbox"]:checked + label .checkboxsvg {
+    stroke-dasharray: 249%;
+    stroke-dashoffset: 179%;
+}

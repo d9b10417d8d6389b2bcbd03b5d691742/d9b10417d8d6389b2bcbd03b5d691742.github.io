@@ -136,6 +136,7 @@ header {
     }
 }
 
+
 .menuicon {
     position: fixed;
     color: white;
@@ -144,21 +145,56 @@ header {
     width: 100%;
     background-color: var(--black);
     text-align: right;
-    line-height: var(--navbar-height);
+    height: var(--navbar-height);
     display: none;
     transition: 1s;
 }
-
-.menuicon a {
+.menuicon > div {
     cursor: pointer;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    font-size: 50px;
-    text-align: center;
-    line-height: 1px;
-    margin-right: 10px;
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    position: relative;
+    bottom: -50%;
+    left: 85%;
+    border-radius: 50px;
+    transition: 1s;
+    transition-delay: 0.5s;
 }
+.menuicon > div::before {
+    content: "";
+    background-color: white;
+    border-radius: 50px;
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    left: 0%;
+    transition: 1s;    
+    top: 250%
+}
+.menuicon > div::after {
+    content: "";
+    background-color: white;
+    border-radius: 50px;
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    left: 0%;
+    transition: 1s;
+    top: -250%
+}
+.menuopen ~ .menuicon > div {
+    transition: 0s;
+    height: 0;
+    background-color: none;
+}
+.menuopen ~ .menuicon > div::before {
+    transform: rotateZ(-45deg);
+}
+.menuopen ~ .menuicon > div::after {
+    transform: rotateZ(45deg);
+}
+
 
 .navtext {
     font-size: 2vw;

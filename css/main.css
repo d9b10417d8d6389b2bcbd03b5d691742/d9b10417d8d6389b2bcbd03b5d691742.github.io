@@ -158,7 +158,7 @@ header {
     bottom: -50%;
     left: 85%;
     border-radius: 50px;
-    transition: 1s;
+    transition: 0.5s;
     transition-delay: 0.5s;
 }
 .menuicon > div::before {

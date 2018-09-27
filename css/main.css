@@ -169,7 +169,7 @@ header {
     width: 30px;
     position: absolute;
     left: 0%;
-    transition: 1s;    
+    transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);    
     top: 250%
 }
 .menuicon > div::after {
@@ -180,7 +180,7 @@ header {
     width: 30px;
     position: absolute;
     left: 0%;
-    transition: 1s;
+    transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     top: -250%
 }
 .menuopen ~ .menuicon > div {

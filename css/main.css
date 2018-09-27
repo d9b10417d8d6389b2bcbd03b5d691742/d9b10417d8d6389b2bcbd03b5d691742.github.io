@@ -89,7 +89,26 @@ header {
 }
 
 .currentpage {
-    text-decoration-line: underline;
+    position: relative;
+    text-decoration: underline;
+}
+.currentpage::after {
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    height: 5px;
+    width: 0%;
+    left: 0%;
+    top: 80%;
+    animation: underline 0.5s cubic-bezier(0.8,-0.54, 0.18, 1.65);
+}
+@keyframes underline {
+    0%{
+        width: 110%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 
 .menu li {

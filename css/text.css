@@ -1,8 +1,12 @@
 .link {
     color: var(--gray);
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .link:hover{
     color: var(--blue);
+}
+
+.nodecor {
+    text-decoration: none;
 }

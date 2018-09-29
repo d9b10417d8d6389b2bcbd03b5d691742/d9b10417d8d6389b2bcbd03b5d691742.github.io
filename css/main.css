@@ -348,3 +348,16 @@ footer {
         height: calc(var(--navbar-height) * var(--navbar-count));
     }
 }
+
+.footerdiv {
+    border-top: 2px solid var(--gray);
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    max-width: 400px;
+}
+
+.fa-2x {
+    margin-left: 25px;
+    margin-right: 25px;
+}

@@ -10,3 +10,8 @@ function GetCommand() {
         $(".acceptterms").attr("disabled", true);
     }
 };
+
+function GetHelp() {
+    $(".help").slideDown(1000);
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+};

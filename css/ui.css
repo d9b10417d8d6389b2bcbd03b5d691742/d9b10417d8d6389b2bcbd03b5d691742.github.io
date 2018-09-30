@@ -140,7 +140,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     position: relative;
     width: 50%;
     padding-bottom: 28.5%;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 15px;
     left: 25%;
     transition: 0.6s;
@@ -155,15 +155,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     padding: 4px;
 }
 
-@media(max-width: 786px) {
-    .ivideo {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.99%;
-        left: 0
-    }
-    
-}
 .acceptbox {
     line-height: 50px;
     text-align: right;
@@ -179,19 +170,59 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 }
 
 
+.mebehind::before {
+    content: "";
+    display:block;
+    position: absolute;
+    height: 70%;
+    width: 100px;
+    right: 70%;
+    bottom: 5%;
+    transition: 0.4s;
+    overflow: visible;
+    background-image: url("../texture/me.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mebehind:hover::before {
+    right: 96%;
+    transform: rotateZ(-20deg);
+}
 
 
+.mebehind::after{
+    content: "Are you Subbed? \000A0 \025BD";
+    display:block;
+    position: absolute;
+    width: 150px;
+    right: 102%;
+    top: 10%;
+    transition: 0.4s;
+    overflow: visible;
+    color: black;
+    font-size: 20px;
+    border: 0.px solid;
+    transform: translateZ(-1), rotateZ(20deg);
+    opacity: 0;
+}
+.mebehind:hover::after {
+    opacity: 0.2;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media(max-width: 786px) {
+    .ivideo {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.99%;
+        left: 0
+    }
+    .mebehind::after {
+        opacity: 0;
+    }
+    .mebehind::before {
+        opacity: 0;
+    }
+    
+}
 

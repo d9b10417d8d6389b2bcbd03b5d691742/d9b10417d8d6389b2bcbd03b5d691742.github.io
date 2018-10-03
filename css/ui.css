@@ -40,6 +40,9 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
     border-bottom: 5px solid var(--blue);
     font-size: 10px;
 }
+.commandbox::-moz-selection{
+    background-color: rgba(0,0,0,0.09);
+}
 .commandbox::selection{
     background-color: rgba(0,0,0,0.09);
 }
@@ -47,6 +50,7 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
 button, .ivideo iframe {
     font-family: Geo, monospace;
     font-size: 20px;
+    -webkit-box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
     padding: 10px;
     position: relative;
@@ -54,10 +58,12 @@ button, .ivideo iframe {
     border: none;
     color: white;
     text-align: center;
+    -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -74,6 +80,7 @@ button::after {
     right: 0%;
     top: 0%;
     border-radius: 50px;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     opacity: 0;
 }
@@ -82,6 +89,7 @@ button:active::after{
     width: 0%;
     right: 50%;
     opacity: 0.5;
+    -webkit-transition: 0s;
     transition: 0s;
 }
 
@@ -95,6 +103,7 @@ button:active::after{
     border: 5px solid var(--blue);
     border-radius: 50%;
     background-color: var(--blue);
+    -webkit-transform: rotateY(180deg) scaleY(0.6) scalex(0.6);
     transform: rotateY(180deg) scaleY(0.6) scalex(0.6);
 }
 
@@ -105,7 +114,9 @@ input[type="checkbox"] {
     margin: 0;
     height: 100%;
     width: 100%; 
-    -webkit-appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
     z-index: 1;
 }
 
@@ -117,6 +128,7 @@ input[type="checkbox"] {
     stroke-linecap: round;
     stroke-dasharray: 250%;
     stroke-dashoffset: -71%;
+    -webkit-transition: 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.99);
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.99);
     height: 50px;
     width: 50px;
@@ -143,6 +155,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     margin-top: 10px;
     margin-bottom: 15px;
     left: 25%;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
 }
 
@@ -178,6 +191,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 100px;
     right: 70%;
     bottom: 5%;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     overflow: visible;
     background-image: url("../texture/me.png");
@@ -187,6 +201,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 
 .mebehind:hover::before {
     right: 96%;
+    -webkit-transform: rotateZ(-20deg);
     transform: rotateZ(-20deg);
 }
 
@@ -198,11 +213,13 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 150px;
     right: 102%;
     top: 10%;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     overflow: visible;
     color: black;
     font-size: 20px;
     border: 0.px solid;
+    -webkit-transform: translateZ(-1), rotateZ(20deg);
     transform: translateZ(-1), rotateZ(20deg);
     opacity: 0;
 }

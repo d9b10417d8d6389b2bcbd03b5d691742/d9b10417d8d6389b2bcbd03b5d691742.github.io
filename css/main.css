@@ -12,6 +12,9 @@ html, body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
     user-select:none;
 }
 
@@ -30,12 +33,30 @@ header {
     text-align: center;
     background-size: cover;
     line-height: calc(400px + var(--navbar-height));
+    -webkit-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
     box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
+    -webkit-box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
     border-bottom: 5px solid white;
+    -webkit-animation: day-night 20s ease infinite;
     animation: day-night 20s ease infinite;
     position: relative;
     z-index: 1;
+}
+
+@-webkit-keyframes day-night {
+    0% {
+        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
+        background-size: cover;
+    }
+    50%{
+        background: #000 url(../texture/headerbg2.jpg) no-repeat 100% 40%;
+        background-size: cover;
+    }
+    100% {
+        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
+        background-size: cover;
+    }
 }
 
 @keyframes day-night {
@@ -65,6 +86,7 @@ header {
     height: var(--navbar-height);
     line-height: var(--navbar-height);
     overflow: hidden;
+    -webkit-transition: 1s;
     transition: 1s;
     background-color: var(--black);
     border-bottom: 5px solid white;
@@ -76,7 +98,9 @@ header {
     color: white;
     font-size: 20px;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
+    -webkit-transition: 500ms;
     transition: 500ms;
+    -webkit-transition-property: text-shadow, color;
     transition-property: text-shadow, color;
 }
 
@@ -97,7 +121,16 @@ header {
     width: 0%;
     left: -5%;
     top: 80%;
+    -webkit-animation: underline 0.5s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     animation: underline 0.5s cubic-bezier(0.8,-0.54, 0.18, 1.65);
+}
+@-webkit-keyframes underline {
+    0%{
+        width: 110%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 @keyframes underline {
     0%{
@@ -119,14 +152,17 @@ header {
     padding: 0;
     height: calc(var(--navbar-height) - 10px);
     width: var(--navbar-height);
+    -webkit-transition: 1s;
     transition: 1s;
     background: url(../texture/cjicon.png) no-repeat 50% 50%;
     background-size:contain;
+    -webkit-transform: rotateZ(20deg);
     transform: rotateZ(20deg);
     cursor: pointer;
 }
 
 .logoicon:hover {
+    -webkit-animation: rotation 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
     animation: rotation 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
 }
 
@@ -134,20 +170,48 @@ header {
     outline: 0;
 }
 
-@keyframes rotation {
+@-webkit-keyframes rotation {
     0% {
+        -webkit-transform: rotate(10deg);
         transform: rotate(10deg);
     }
     25% {
+        -webkit-transform: rotate(-20deg);
         transform: rotate(-20deg);
     }
     50% {
+        -webkit-transform: rotate(10deg);
         transform: rotate(10deg);
     }
     75% {
+        -webkit-transform: rotate(-20deg);
         transform: rotate(-20deg);
     }
     100% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    25% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    75% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    100% {
+        -webkit-transform: rotate(20deg);
         transform: rotate(20deg);
     }
 }
@@ -163,6 +227,7 @@ header {
     text-align: right;
     height: var(--navbar-height);
     display: none;
+    -webkit-transition: 1s;
     transition: 1s;
 }
 .menuicon > div {
@@ -174,7 +239,9 @@ header {
     bottom: -50%;
     left: 85%;
     border-radius: 50px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s;
 }
 .menuicon > div::before {
@@ -185,6 +252,7 @@ header {
     width: 30px;
     position: absolute;
     left: 0%;
+    -webkit-transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);    
     top: 250%
 }
@@ -196,18 +264,22 @@ header {
     width: 30px;
     position: absolute;
     left: 0%;
+    -webkit-transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     top: -250%
 }
 .menuopen ~ .menuicon > div {
+    -webkit-transition: 0s;
     transition: 0s;
     height: 0;
     background-color: none;
 }
 .menuopen ~ .menuicon > div::before {
+    -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
 }
 .menuopen ~ .menuicon > div::after {
+    -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
 }
 
@@ -220,6 +292,7 @@ header {
     padding: 0;
     height: 0;
     width:100px;
+    -webkit-transition: 800ms cubic-bezier(0.51, 0, 0.28, 1);
     transition: 800ms cubic-bezier(0.51, 0, 0.28, 1);
     line-height: calc(var(--navbar-height));
 }
@@ -236,8 +309,10 @@ nav {
     position: fixed;
     width: 100%;
     height: var(--navbar-height);
+    -webkit-transition: 1s;
     transition: 1s;
     background-color: var(--black);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
 }
 
@@ -247,6 +322,7 @@ nav {
     background-size: 100;
     height: calc(var(--header-height) - var(--navbar-height));
     width:100%;
+    -webkit-transform:translate(0%, var(--navbar-height));
     transform:translate(0%, var(--navbar-height));
     text-shadow: 0px 0px 50px rgba(0,0,0,0.6);
 }
@@ -256,6 +332,7 @@ nav {
     padding: 0;
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 5vw;
     height: 0;
@@ -267,9 +344,17 @@ nav {
     line-height: 0;
     position: relative;
     top: 60%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 2vw;
+    -webkit-animation: txtmovein 1s ease;
     animation: txtmovein 1s ease;
+}
+
+@-webkit-keyframes txtmovein {
+    0% {
+        font-size: 0vw;
+    }
 }
 
 @keyframes txtmovein {
@@ -298,6 +383,7 @@ nav {
     color: var(--black);
     margin: 15px 10px 15px 10px;
     border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;
     font-family: Geo, monospace;
@@ -308,6 +394,7 @@ nav {
 footer {
     background-color: var(--black);
     color: var(--gray);
+    -webkit-box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.79);
     border-top: 5px solid white;
     font-size: 12px;
@@ -339,6 +426,7 @@ footer {
     .menu {
         height: 0px;
         margin-top: var(--navbar-height);
+        -webkit-transition: 1s;
         transition: 1s;
     }
     

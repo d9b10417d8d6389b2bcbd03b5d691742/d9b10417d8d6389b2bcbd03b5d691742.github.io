@@ -112,6 +112,7 @@ header {
 .currentpage {
     position: relative;
     text-decoration: underline;
+    text-decoration-color: currentcolor;
 }
 .currentpage::after {
     content: "";

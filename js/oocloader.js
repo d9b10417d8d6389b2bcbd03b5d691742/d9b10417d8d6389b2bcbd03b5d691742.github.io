@@ -18,4 +18,6 @@ function dataLoader (xml) {
     $(".ivideo").children().attr("src", "https://www.youtube-nocookie.com/embed/" + $(xml).find("videourl").text() + "?modestbranding=1&showinfo=0&rel=0&fs=0&color=white&disablekb=1");
     $(".ooctitle").text($(xml).find("name").text() + "in Minecraft" + $(xml).find("version").text() + "!");
     $(".oocdesc").text($(xml).find("description").text());
+    
+    $(".truefalselist:nth-child(1)").children().text("xxxxxx");
 };

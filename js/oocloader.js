@@ -19,5 +19,14 @@ function dataLoader (xml) {
     $(".ooctitle").text($(xml).find("name").text() + "in Minecraft" + $(xml).find("version").text() + "!");
     $(".oocdesc").text($(xml).find("description").text());
     
-    $(".truefalselist:nth-child(1)").children().text("xxxxxx");
+    $(".truefalselist").children().eq(0).children().text("Works in " + $(xml).find("version").text());
+    
+    $(xml).find("true").each(function() {
+        $(".truefalselist").append('<li class="litrue"><span>' + $(this).text() + '</span></li>');
+        
+    });
+    $(xml).find("false").each(function() {
+        $(".truefalselist").append('<li class="lifalse"><span>' + $(this).text() + '</span></li>');
+    });
+    
 };

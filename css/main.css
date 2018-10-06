@@ -12,10 +12,11 @@ html, body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
 body {
@@ -87,6 +88,7 @@ header {
     line-height: var(--navbar-height);
     overflow: hidden;
     -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background-color: var(--black);
     border-bottom: 5px solid white;
@@ -99,21 +101,21 @@ header {
     font-size: 20px;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
     -webkit-transition: 500ms;
+    -o-transition: 500ms;
     transition: 500ms;
     -webkit-transition-property: text-shadow, color;
+    -o-transition-property: text-shadow, color;
     transition-property: text-shadow, color;
 }
-
 .menu li a:hover {
     color: var(--blue); 
     text-shadow: 0px 0px 10px var(--blue);
 }
-
-.currentpage {
+.menu .currentpage a {
     position: relative;
     text-decoration: underline;
 }
-.currentpage::after {
+.currentpage a::after {
     content: "";
     position: absolute;
     background-color: var(--black);
@@ -153,10 +155,12 @@ header {
     height: calc(var(--navbar-height) - 10px);
     width: var(--navbar-height);
     -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background: url(../texture/cjicon.png) no-repeat 50% 50%;
     background-size:contain;
     -webkit-transform: rotateZ(20deg);
+    -ms-transform: rotate(20deg);
     transform: rotateZ(20deg);
     cursor: pointer;
 }
@@ -228,6 +232,7 @@ header {
     height: var(--navbar-height);
     display: none;
     -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
 .menuicon > div {
@@ -240,9 +245,11 @@ header {
     left: 85%;
     border-radius: 50px;
     -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+       transition-delay: 0.5s;
 }
 .menuicon > div::before {
     content: "";
@@ -253,6 +260,7 @@ header {
     position: absolute;
     left: 0%;
     -webkit-transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);
+    -o-transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     transition: 1s cubic-bezier(0.8,-0.54, 0.18, 1.65);    
     top: 250%
 }
@@ -265,22 +273,26 @@ header {
     position: absolute;
     left: 0%;
     -webkit-transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
+    -o-transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     transition: 0.9s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     top: -250%
 }
 .menuopen ~ .menuicon > div {
     -webkit-transition: 0s;
+    -o-transition: 0s;
     transition: 0s;
     height: 0;
     background-color: none;
 }
 .menuopen ~ .menuicon > div::before {
     -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotateZ(-45deg);
 }
 .menuopen ~ .menuicon > div::after {
     -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotateZ(45deg);
 }
 
 
@@ -293,6 +305,7 @@ header {
     height: 0;
     width:100px;
     -webkit-transition: 800ms cubic-bezier(0.51, 0, 0.28, 1);
+    -o-transition: 800ms cubic-bezier(0.51, 0, 0.28, 1);
     transition: 800ms cubic-bezier(0.51, 0, 0.28, 1);
     line-height: calc(var(--navbar-height));
 }
@@ -310,6 +323,7 @@ nav {
     width: 100%;
     height: var(--navbar-height);
     -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background-color: var(--black);
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
@@ -323,6 +337,7 @@ nav {
     height: calc(var(--header-height) - var(--navbar-height));
     width:100%;
     -webkit-transform:translate(0%, var(--navbar-height));
+    -ms-transform:translate(0%, var(--navbar-height));
     transform:translate(0%, var(--navbar-height));
     text-shadow: 0px 0px 50px rgba(0,0,0,0.6);
 }
@@ -333,7 +348,8 @@ nav {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     font-size: 5vw;
     height: 0;
     line-height: 0;
@@ -345,7 +361,8 @@ nav {
     position: relative;
     top: 60%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     font-size: 2vw;
     -webkit-animation: txtmovein 1s ease;
     animation: txtmovein 1s ease;
@@ -377,7 +394,6 @@ nav {
 
 .whitepage {
     background-blend-mode:screen;
-    background-image: url(../texture/pagebg.jpg);
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.9);
     color: var(--black);
@@ -389,7 +405,11 @@ nav {
     font-family: Geo, monospace;
     padding-top: 10px
 }
-
+@supports (background-blend-mode:screen) {
+    .whitepage {
+        background-image: url(../texture/pagebg.jpg);
+    }
+}
 
 footer {
     background-color: var(--black);
@@ -427,6 +447,7 @@ footer {
         height: 0px;
         margin-top: var(--navbar-height);
         -webkit-transition: 1s;
+        -o-transition: 1s;
         transition: 1s;
     }
     

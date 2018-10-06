@@ -30,7 +30,6 @@ content h3::after {
     width: 100%;
     top: 80%;
     left: 0px;
-
     background-color: var(--blue);;
 }
 
@@ -119,18 +118,6 @@ content li {
     -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
     background-color: limegreen;
-}
-
-.arrow_left {
-    margin-right: 10px;
-    font-size: 19px;
-
-}
-
-.arrow_right {
-    margin-left: 10px;
-    font-size: 19px;
-
 }
 
 .copyable {

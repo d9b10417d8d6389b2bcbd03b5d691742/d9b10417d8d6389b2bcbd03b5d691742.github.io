@@ -93,6 +93,10 @@ button:active::after{
     transition: 0s;
 }
 
+button:active {
+    transform: scale(0.95, 0.95);
+    transition: 0s;
+}
 .checkboxdiv {
     height: 40px;
     width: 40px;

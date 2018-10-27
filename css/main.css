@@ -19,30 +19,22 @@ html, body {
     cursor: default;
 }
 
-body {
-    background-position: center 20%;
-    text-align: center;
+header, nav, footer {
     color: white;
-    background: url(../texture/tray.png);
-    font-family: Anton, monospace;
+    font-family: Anton, sans-serif;
 }
-
-header {
+body::after{
+    content: "";
+    position: fixed;
+    display: block;
+    height: 100%;
     width: 100%;
-    height: var(--header-height);
-    background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
-    text-align: center;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: url(../texture/pagebgb.png);
     background-size: cover;
-    line-height: calc(400px + var(--navbar-height));
-    -webkit-box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
-    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.6);
-    -webkit-box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
-    box-shadow: inset 0px -50px 50px -50px rgba(0,0,0,0.9);
-    border-bottom: 5px solid white;
-    -webkit-animation: day-night 20s ease infinite;
-    animation: day-night 20s ease infinite;
-    position: relative;
-    z-index: 1;
+    background-attachment: fixed;
 }
 
 @-webkit-keyframes day-night {
@@ -92,7 +84,8 @@ header {
     transition: 1s;
     background-color: var(--black);
     border-bottom: 5px solid white;
-    padding-right: 10%
+    padding-right: 10%;
+    text-transform: uppercase;
 }
 
 .menu li a {
@@ -328,6 +321,7 @@ nav {
     background-color: var(--black);
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
+    z-index: 999;
 }
 
 .logotext {
@@ -392,26 +386,37 @@ nav {
     min-height: calc(100vh - var(--header-height));
 }
 
-.whitepage {
-    background-blend-mode:screen;
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--black);
-    margin: 15px 10px 15px 10px;
-    border-radius: 8px;
+
+header, .whitepage {
+    margin: 0px 10px;
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;
-    font-family: Geo, monospace;
-    padding-top: 10px
 }
-@supports (background-blend-mode:screen) {
-    .whitepage {
-        background-image: url(../texture/pagebg.jpg);
-    }
+
+
+header {
+    margin-top: 100px;
+    height: var(--header-height);
+    background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
+    text-align: center;
+    background-size: cover;
+    line-height: calc(400px + var(--navbar-height));
+    -webkit-animation: day-night 20s ease infinite;
+    animation: day-night 20s ease infinite;
+}
+
+.whitepage {
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--black);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
+    font-family: Geo, sans-serif;
+    padding: 0px 10% 50px;
 }
 
 footer {
+    text-align: center;
     background-color: var(--black);
     color: var(--gray);
     -webkit-box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.79);
@@ -421,16 +426,9 @@ footer {
     line-height: 18px;
 }
 
-.headertitle {
-    line-height: 10px;
-    font-size: 10px;
-    color: aqua;
-}
-
 @media(max-width: 786px) {
-    
-    .whitepage {
-        background-image: none;
+    header {
+        margin-top: 0px;
     }
     
     .menuicon {

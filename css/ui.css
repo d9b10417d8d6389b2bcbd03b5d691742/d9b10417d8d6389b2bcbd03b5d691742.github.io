@@ -48,23 +48,25 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
 }
 
 button, .ivideo iframe {
-    font-family: Geo, monospace;
-    font-size: 20px;
+
     -webkit-box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    padding: 10px 30px;
     position: relative;
-    background-color: var(--blue);
     border: none;
-    color: white;
-    text-align: center;
-    -webkit-transition: 0.4s ease-out;
-    transition: 0.4s ease-out;
-    text-decoration: none;
-    overflow: hidden;
     cursor: pointer;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+button {
+    font-family: Geo, sans-serif;
+    font-size: 20px;
+    background-color: var(--blue);
+    color: white;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+    display: inline-block;
 }
 
 button:hover {
@@ -117,7 +119,8 @@ input[type="checkbox"] {
     border: none;
     margin: 0;
     height: 100%;
-    width: 100%; 
+    width: 200px; 
+    right: 400%;
     -webkit-appearance: none; 
     -moz-appearance: none; 
     appearance: none;
@@ -169,7 +172,8 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     left: 0%;
     width: 100%;
     height: 100%;
-    padding: 4px;
+    padding: 2px;
+    background-color: var(--black);
 }
 
 .acceptbox {
@@ -179,7 +183,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     margin: auto;
     width: 100px;
     height: 50px;
-
+    font-size: 25px;
 }
 .acceptbox .checkboxdiv {
     top: -100%;
@@ -211,7 +215,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 
 
 .mebehind::after{
-    content: "Are you Subbed? \000A0 \025BD";
+    content: "Are you Subbed?";
     display:block;
     position: absolute;
     width: 150px;
@@ -231,7 +235,22 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     opacity: 0.2;
 }
 
-@media(max-width: 786px) {
+
+.oocicon {
+    background-image: url(../texture/cmdmachine.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 250px;
+    right: 25%;
+    
+}
+
+
+
+@media(max-width: 900px) {
     .ivideo {
         position: relative;
         width: 100%;
@@ -240,6 +259,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     }
     .mebehind::after {
         opacity: 0;
+        display: none;
     }
     .mebehind::before {
         opacity: 0;

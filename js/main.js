@@ -13,5 +13,5 @@ $(window).on("scroll", function() {
     } else {
         $("nav").removeClass("darknavbar");
     };
-    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
+//    $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
     });

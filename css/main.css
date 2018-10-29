@@ -428,7 +428,7 @@ footer {
 
 @media(max-width: 786px) {
     header {
-        margin-top: 0px;
+        margin-top: 65px;
     }
     
     .menuicon {

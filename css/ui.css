@@ -235,22 +235,30 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     opacity: 0.2;
 }
 
-
 .oocicon {
     background-image: url(../texture/cmdmachine.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 100px;
     width: 100px;
-    position: absolute;
-    top: 250px;
-    right: 25%;
-    
+    margin-left: 20px;
+     -webkit-animation: float 50s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
+
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(10px)
+    }
 }
 
 
-
 @media(max-width: 900px) {
+    .oocicon {
+        display: none;
+    }
     .ivideo {
         position: relative;
         width: 100%;

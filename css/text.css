@@ -111,5 +111,14 @@ content ul, ol {
 .center{
     text-align: center;
 }
+.flex {
+    display: flex;
+}
 
+@media(max-width: 786px) {
+    
+    content h3 {
+        font-size: 30px;
 
+    }
+}

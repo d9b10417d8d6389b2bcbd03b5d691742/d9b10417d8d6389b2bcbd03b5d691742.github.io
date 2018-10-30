@@ -280,6 +280,11 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     margin: auto;
     fill:var(--black);
     stroke: var(--black);
+    width: 100px;
+    height: 100px;
+    overflow: visible;
+    background-color: red;
+    
 }
 .blackbottle path {
     animation: error-blink 5s infinite;

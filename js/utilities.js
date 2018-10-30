@@ -15,3 +15,7 @@ function GetHelp() {
     $(".help").slideDown(1000);
     $("html, body").animate({scrollTop:$(document).height()}, 2500, "linear");
 };
+
+function OpenPage(page) {
+    window.location = '/'+ page;
+}

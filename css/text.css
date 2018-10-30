@@ -2,13 +2,13 @@ content * {
     font-size: 18px;
 }
 
-.link {
+content a, .link {
     color: var(--gray);
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
-.link:hover{
+content a:hover , .link:hover{
     color: var(--blue);
 }
 
@@ -115,9 +115,7 @@ content ul, ol {
 }
 
 @media(max-width: 786px) {
-    
     content h3 {
         font-size: 30px;
-
     }
 }

@@ -383,7 +383,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
-    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--navbar-height));
 }
 
 

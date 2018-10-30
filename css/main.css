@@ -413,6 +413,7 @@ header {
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     font-family: Geo, sans-serif;
     padding: 0px 10% 50px;
+    user-select:text;
 }
 
 footer {
@@ -451,6 +452,14 @@ footer {
     
     .menuopen {
         height: calc(var(--navbar-height) * var(--navbar-count));
+    }
+    
+    .logotext h1 {
+        font-size: 12vw;
+}
+
+    .logotext h2 {
+        font-size: 6vw;
     }
 }
 

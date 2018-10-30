@@ -2,6 +2,11 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
     outline: 0;
 }
 
+/*Not selectable things*/
+button, .acceptbox, .ivideo {
+    user-select: none;
+} 
+
 .codeclaim {
     display: block;
     position: static;
@@ -237,19 +242,35 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 
 .oocicon {
     background-image: url(../texture/cmdmachine.png);
-    background-size: contain;
+    background-size:contain;
     background-repeat: no-repeat;
-    width: 100px;
     margin-left: 20px;
-     -webkit-animation: float 50s ease-in-out infinite;
+    width: 15%;
+    -webkit-animation: float 5s ease-in-out infinite;
     animation: float 5s ease-in-out infinite;
-
 }
-@keyframes float {
+.flex .oocdesc {
+    width: 80%;
+}
+
+@-webkit-keyframes float {
     0% {
+        -webkit-transform: translateY(0px);
         transform: translateY(0px)
     }
     50% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@keyframes float {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+    50% {
+        -webkit-transform: translateY(10px);
         transform: translateY(10px)
     }
 }
@@ -259,6 +280,9 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     .oocicon {
         display: none;
     }
+    .flex .oocdesc {
+    width: 100%;
+}
     .ivideo {
         position: relative;
         width: 100%;

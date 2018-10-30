@@ -113,6 +113,7 @@ content ul, ol {
 }
 .flex {
     display: flex;
+    position: relative;
 }
 
 @media(max-width: 786px) {

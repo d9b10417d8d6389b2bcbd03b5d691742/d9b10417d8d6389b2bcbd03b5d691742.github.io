@@ -19,6 +19,7 @@ button, .acceptbox, .ivideo {
     margin-right: 5px;
 
 }
+
 .codeclaimspace {
     display: block;
     position: static;
@@ -45,9 +46,11 @@ button, .acceptbox, .ivideo {
     border-bottom: 5px solid var(--blue);
     font-size: 10px;
 }
+
 .commandbox::-moz-selection{
     background-color: rgba(0,0,0,0.09);
 }
+
 .commandbox::selection{
     background-color: rgba(0,0,0,0.09);
 }
@@ -147,6 +150,7 @@ input[type="checkbox"] {
     top: -45px;
     left: -5px;
 }
+
 input[type="checkbox"]:hover + label .checkboxsvg {
     stroke-width: 5px;
 }
@@ -190,11 +194,11 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     height: 50px;
     font-size: 25px;
 }
+
 .acceptbox .checkboxdiv {
     top: -100%;
     right: 40%;
 }
-
 
 .mebehind::before {
     content: "";
@@ -218,7 +222,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     transform: rotateZ(-20deg);
 }
 
-
 .mebehind::after{
     content: "Are you Subbed?";
     display:block;
@@ -236,6 +239,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     transform: translateZ(-1), rotateZ(20deg);
     opacity: 0;
 }
+
 .mebehind:hover::after {
     opacity: 0.2;
 }
@@ -249,6 +253,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -webkit-animation: float 5s ease-in-out infinite;
     animation: float 5s ease-in-out infinite;
 }
+
 .flex .oocdesc {
     width: 80%;
 }
@@ -283,8 +288,8 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 100px;
     height: 100px;
     overflow: visible;
-    
 }
+
 .blackbottle path {
     -webkit-animation: error-blink 5s infinite;
     animation: error-blink 5s infinite;
@@ -300,6 +305,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
         d: path('M135.77,105.86H120.11V90.68H105.83V76H90.65c-.29-1,.06-.46-.48-1V55c0-3.06-.36-7.2.48-9.49h15.18V15.65c-4.44,0-12.22.8-15.66-.47V0H46.05V15.18h-.48v.47H30.39V45.54c4.44,0,12.22-.79,15.66.48,0,9.24,1,21.65-.48,29.89H30.39V90.14H16.16V105.8c-4.55,0-12.6-.83-16.13.47V172.7c0,2.59-.19,5.76.47,7.59H30.39V196h75.44v-16.1h30.41V113.45C136.24,110.86,136.43,107.69,135.77,105.86Zm-53,9.86-13.08,1-16.71,0-19.9-1,.69-.37L57,117l12.67-.33,9.93-.92L103.69,114h0Z')
     }
 }
+
 @keyframes error-blink {
     5%{
         /*origonal*/
@@ -311,14 +317,9 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     }
 }
 
-
-
-
-
 .card {
     position: relative;
     width: 100%;
-
     margin: auto;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -333,8 +334,9 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -webkit-transform: translate(0px, -5px);
     transform: translate(0px, -5px);
 }
+
 .card:hover .cardimgbox img {
-    opacity: 0.16;
+    opacity: 0.5;
 }
 
 .cardimgbox {
@@ -378,27 +380,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     text-align: center;
     color: white;
     opacity: 1;
-
-}
-
-.cardimgbox::before{
-    content: "";
-    position: absolute;
-    top: -100%;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-
-}
-
-.card:hover .cardimgbox::before {
-    content: attr(desc);
-    position: absolute;
-    top: 15%;
-    left: 9%;
-    width: 83%;
-    height: 55%;
-    overflow: hidden;
-
 }
 
 .card:hover h2::after{
@@ -411,21 +392,17 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     font-size: 30px;
 }
 
-
-
 @media(max-width: 820px){
     .cardwrapper{
         grid-template-columns: repeat(2, 1fr);
     }
-    
 }
+
 @media(max-width: 550px){
     .cardwrapper{
         grid-template-columns: repeat(1, 1fr);
     }
-    
 }
-
 
 @media(max-width: 900px) {
     .oocicon {
@@ -433,7 +410,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     }
     .flex .oocdesc {
     width: 100%;
-}
+    }
     .ivideo {
         position: relative;
         width: 100%;
@@ -447,6 +424,4 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     .mebehind::before {
         opacity: 0;
     }
-    
 }
-

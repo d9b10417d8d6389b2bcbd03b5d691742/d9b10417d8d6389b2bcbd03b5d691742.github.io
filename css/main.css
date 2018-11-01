@@ -32,7 +32,7 @@ body::after{
     top: 0;
     right: 0;
     z-index: -1;
-    background: url(../texture/pagebgb.png);
+    background: url(../texture/pagebg.jpg);
     background-size: cover;
     background-attachment: fixed;
 }

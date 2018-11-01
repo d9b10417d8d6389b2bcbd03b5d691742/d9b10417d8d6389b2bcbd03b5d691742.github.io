@@ -33,5 +33,5 @@ function dataLoader (xml) {
 };
 
 function notLoaded () {
-    OpenPage('/notFound')
+    OpenPage('404')
 }

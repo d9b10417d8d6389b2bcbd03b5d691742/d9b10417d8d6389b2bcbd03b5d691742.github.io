@@ -75,9 +75,8 @@
                     <button onclick="givecookie()">Get Your Free Cookie!</button>
                     <a href="/" style="margin-left: 10px">Go&#x000A0;to&#x000A0;HOME&#x000A0;page</a>
                     
-                    <div class="freecookie" style="background-image: url(texture/cookie.png); height: 50px; width: 50px; background-repeat: no-repeat; background-size: contain; image-rendering: pixelated; position:relative; -webkit-animation: float 1.5s ease-in-out infinite; animation: float 1.5s ease-in-out infinite; margin: auto"><script>$(function() {$('.freecookie').toggle();}); function givecookie() {$('.freecookie').slideDown();}</script></div>
+                    <div class="freecookie" style="background-image: url(texture/cookie.png); height: 50px; width: 50px; background-repeat: no-repeat; background-size: contain; image-rendering: pixelated; position:relative; -webkit-animation: float 1.5s ease-in-out infinite; animation: float 1.5s ease-in-out infinite; margin: auto; display: none"><script>function givecookie() {$('.freecookie').slideDown()}</script></div>
 
-                    
                 </div>
             </div>
         </content>

@@ -4,7 +4,8 @@ $(function() {
         $.ajax({
             type: "GET",
             url: "xml/" + URLtag[1] + ".xml",
-            success: dataLoader
+            success: dataLoader,
+            error: notLoaded
         });
     }
 });
@@ -30,3 +31,7 @@ function dataLoader (xml) {
     });
     
 };
+
+function notLoaded () {
+    OpenPage('/notFound')
+}

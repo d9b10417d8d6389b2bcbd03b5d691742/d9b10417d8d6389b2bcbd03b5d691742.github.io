@@ -2,6 +2,10 @@ content * {
     font-size: 18px;
 }
 
+content p, content ul, content ol{
+    line-height: 25px;
+}
+
 content a, .link {
     color: var(--gray);
     -webkit-transition: 0.5s;
@@ -24,7 +28,7 @@ content h3 {
 }
 
 
-content ul, ol {
+content ul, content ol {
     list-style-type:square;
     color: var(--blue);
 }

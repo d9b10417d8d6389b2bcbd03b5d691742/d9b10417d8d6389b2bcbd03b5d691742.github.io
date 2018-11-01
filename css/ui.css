@@ -168,7 +168,7 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     position: relative;
     width: 50%;
     padding-bottom: 28.5%;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 15px;
     left: 25%;
     -webkit-transition: 0.6s;

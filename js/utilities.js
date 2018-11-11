@@ -11,6 +11,10 @@ function GetCommand() {
     if ($(".acceptterms").is(":checked")) {
         $(".codeclaim").slideDown();
         $(".acceptterms").attr("disabled", true);
+    } else {
+        setTimeout(function(){
+            Msg("Please accept the Terms Of Use first!", "no")
+        }, 100)
     }
 };
 

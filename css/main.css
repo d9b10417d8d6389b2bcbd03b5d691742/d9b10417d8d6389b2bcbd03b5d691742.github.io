@@ -384,8 +384,9 @@ nav {
     margin-right: auto;
     max-width: 1000px;
     min-height: calc(100vh - var(--navbar-height));
+    -webkit-transition: 200ms;
+    transition: 200ms;
 }
-
 
 header, .whitepage, .blackpage{
     margin: 0px 10px;
@@ -393,7 +394,6 @@ header, .whitepage, .blackpage{
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     max-width: 1000px;
 }
-
 
 header {
     margin-top: 100px;

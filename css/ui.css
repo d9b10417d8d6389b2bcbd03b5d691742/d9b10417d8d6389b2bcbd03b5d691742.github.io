@@ -382,6 +382,91 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     opacity: 1;
 }
 
+.msgbox, .deletedsmgbox {
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 0px 99999px rgba(0, 0, 0, 0.4), 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 0px 99999px rgba(0, 0, 0, 0.4), 0px 1px 6px -1px rgba(0, 0, 0, 0.4);
+    z-index: 99;
+}
+
+.msgbox::after, .deletedsmgbox::after {
+    content: '';
+    position: absolute;
+    top: -15%;
+    right: -10px;
+    background-image: url("../texture/cjicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-animation: zoomin 0.3s ease-out;
+    animation: zoomin 0.3s ease-out;
+}
+
+@-webkit-keyframes zoomin {
+    0%{
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1)
+    };
+    100%{
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes zoomin {
+    0%{
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1)
+    };
+    100%{
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.msgbox p, .deletedsmgbox p {
+    font-family: Geo, sans-serif;
+    padding: 0px 10% 0px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.msgbox i, .deletedsmgbox i {
+    position: relative;
+    font-size: 50px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    padding-top: 20px;
+}
+
+.msgbox div, .deletedsmgbox div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.msgbox ~ .scrollcontent{
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+}
+
 @media(max-width: 820px){
     .cardwrapper{
         grid-template-columns: repeat(2, 1fr);

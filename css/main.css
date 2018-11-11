@@ -435,6 +435,8 @@ footer {
     border-top: 5px solid white;
     font-size: 12px;
     line-height: 18px;
+    position: relative;
+    z-index: 99;
 }
 
 @media(max-width: 786px) {

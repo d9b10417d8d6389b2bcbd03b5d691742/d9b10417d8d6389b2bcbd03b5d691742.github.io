@@ -37,36 +37,6 @@ body::after{
     background-attachment: fixed;
 }
 
-@-webkit-keyframes day-night {
-    0% {
-        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-    50%{
-        background: #000 url(../texture/headerbg2.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-    100% {
-        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-}
-
-@keyframes day-night {
-    0% {
-        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-    50%{
-        background: #000 url(../texture/headerbg2.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-    100% {
-        background: #000 url(../texture/headerbg1.jpg) no-repeat 100% 40%;
-        background-size: cover;
-    }
-}
-
 .menu {
     top: 0;
     padding: 0;
@@ -119,22 +89,6 @@ body::after{
     -webkit-animation: underline 0.5s cubic-bezier(0.8,-0.54, 0.18, 1.65);
     animation: underline 0.5s cubic-bezier(0.8,-0.54, 0.18, 1.65);
 }
-@-webkit-keyframes underline {
-    0%{
-        width: 110%;
-    }
-    100% {
-        width: 0%;
-    }
-}
-@keyframes underline {
-    0%{
-        width: 110%;
-    }
-    100% {
-        width: 0%;
-    }
-}
 
 .menu li {
     display: inline;
@@ -159,60 +113,13 @@ body::after{
 }
 
 .logoicon:hover {
-    -webkit-animation: rotation 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
-    animation: rotation 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
+    -webkit-animation: shake 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
+    animation: shake 500ms cubic-bezier(0.56, 0.26, 0.47, 0.75);
 }
 
 .logoicon:focus {
     outline: 0;
 }
-
-@-webkit-keyframes rotation {
-    0% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    25% {
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-    }
-    50% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    75% {
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-    }
-    100% {
-        -webkit-transform: rotate(20deg);
-        transform: rotate(20deg);
-    }
-}
-
-@keyframes rotation {
-    0% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    25% {
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-    }
-    50% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    75% {
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-    }
-    100% {
-        -webkit-transform: rotate(20deg);
-        transform: rotate(20deg);
-    }
-}
-
 
 .menuicon {
     position: fixed;
@@ -288,7 +195,6 @@ body::after{
         transform: rotateZ(45deg);
 }
 
-
 .navtext {
     font-size: 2vw;
     top: -100%;
@@ -360,18 +266,6 @@ nav {
     font-size: 2vw;
     -webkit-animation: txtmovein 1s ease;
     animation: txtmovein 1s ease;
-}
-
-@-webkit-keyframes txtmovein {
-    0% {
-        font-size: 0vw;
-    }
-}
-
-@keyframes txtmovein {
-    0% {
-        font-size: 0vw;
-    }
 }
 
 .darknavbar {

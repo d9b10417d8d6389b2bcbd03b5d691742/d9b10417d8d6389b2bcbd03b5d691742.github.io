@@ -2,7 +2,6 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
     outline: 0;
 }
 
-/*Not selectable things*/
 button, .acceptbox, .ivideo {
     user-select: none;
 } 
@@ -161,10 +160,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 }
 
 .ivideo {
-/*  original
-    width: 560px;
-    height: 315px;
-*/
     position: relative;
     width: 50%;
     padding-bottom: 28.5%;
@@ -262,28 +257,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 80%;
 }
 
-@-webkit-keyframes float {
-    0% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-    50% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-}
-
-@keyframes float {
-    0% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-    50% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-}
-
 .blackbottle {
     display: block;
     margin: auto;
@@ -297,28 +270,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 .blackbottle path {
     -webkit-animation: error-blink 5s infinite;
     animation: error-blink 5s infinite;
-}
-
-@-webkit-keyframes error-blink {
-    5%{
-        /*origonal*/
-        d: path('M135.8,105.9h-15.7V90.7h-14.3V76H90.7c-0.3-1,0.1-0.5-0.5-1V55c0-3.1-0.4-7.2,0.5-9.5h15.2V15.7c-4.4,0-12.2,0.8-15.7-0.5V0H46v15.2h-0.5v0.5H30.4v29.9c4.4,0,12.2-0.8,15.7,0.5c0,9.2,1,21.7-0.5,29.9H30.4v14.2H16.2v15.7c-4.5,0-12.6-0.8-16.1,0.5v66.4c0,2.6-0.2,5.8,0.5,7.6h29.9V196h75.4v-16.1h30.4v-66.4C136.2,110.9,136.4,107.7,135.8,105.9zM85,135.3c-7.2,0-13.4-4.6-16.5-11.4c-3.1,6.8-9.3,11.4-16.5,11.4c-10.3,0-18.7-9.6-18.7-21.3c0-2.6,0.4-5,1.2-7.3l22.8-13.1c4.9,1.6,8.9,5.5,11.3,10.5c2.3-5,6.4-8.9,11.3-10.5l22.8,13.1c0.7,2.3,1.2,4.7,1.2,7.3C103.7,125.8,95.3,135.3,85,135.3z')
-    }
-    1%{
-        /*blink*/
-        d: path('M135.8,105.9h-15.7V90.7h-14.3V76H90.7c-0.3-1,0.1-0.5-0.5-1V55c0-3.1-0.4-7.2,0.5-9.5h15.2V15.7c-4.4,0-12.2,0.8-15.7-0.5V0H46v15.2h-0.5v0.5H30.4v29.9c4.4,0,12.2-0.8,15.7,0.5c0,9.2,1,21.7-0.5,29.9H30.4v14.2H16.2v15.7c-4.5,0-12.6-0.8-16.1,0.5v66.4c0,2.6-0.2,5.8,0.5,7.6h29.9V196h75.4v-16.1h30.4v-66.4C136.2,110.9,136.4,107.7,135.8,105.9z')
-    }
-}
-
-@keyframes error-blink {
-    5%{
-        /*origonal*/
-        d: path('M135.8,105.9h-15.7V90.7h-14.3V76H90.7c-0.3-1,0.1-0.5-0.5-1V55c0-3.1-0.4-7.2,0.5-9.5h15.2V15.7c-4.4,0-12.2,0.8-15.7-0.5V0H46v15.2h-0.5v0.5H30.4v29.9c4.4,0,12.2-0.8,15.7,0.5c0,9.2,1,21.7-0.5,29.9H30.4v14.2H16.2v15.7c-4.5,0-12.6-0.8-16.1,0.5v66.4c0,2.6-0.2,5.8,0.5,7.6h29.9V196h75.4v-16.1h30.4v-66.4C136.2,110.9,136.4,107.7,135.8,105.9zM85,135.3c-7.2,0-13.4-4.6-16.5-11.4c-3.1,6.8-9.3,11.4-16.5,11.4c-10.3,0-18.7-9.6-18.7-21.3c0-2.6,0.4-5,1.2-7.3l22.8-13.1c4.9,1.6,8.9,5.5,11.3,10.5c2.3-5,6.4-8.9,11.3-10.5l22.8,13.1c0.7,2.3,1.2,4.7,1.2,7.3C103.7,125.8,95.3,135.3,85,135.3z')
-    }
-    1%{
-        /*blink*/
-        d: path('M135.8,105.9h-15.7V90.7h-14.3V76H90.7c-0.3-1,0.1-0.5-0.5-1V55c0-3.1-0.4-7.2,0.5-9.5h15.2V15.7c-4.4,0-12.2,0.8-15.7-0.5V0H46v15.2h-0.5v0.5H30.4v29.9c4.4,0,12.2-0.8,15.7,0.5c0,9.2,1,21.7-0.5,29.9H30.4v14.2H16.2v15.7c-4.5,0-12.6-0.8-16.1,0.5v66.4c0,2.6-0.2,5.8,0.5,7.6h29.9V196h75.4v-16.1h30.4v-66.4C136.2,110.9,136.4,107.7,135.8,105.9z')
-    }
 }
 
 .card {
@@ -415,27 +366,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     animation: zoomin 0.3s ease-out;
 }
 
-@-webkit-keyframes zoomin {
-    0%{
-        -webkit-transform: scale(0.1);
-        transform: scale(0.1)
-    };
-    100%{
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
-@keyframes zoomin {
-    0%{
-        -webkit-transform: scale(0.1);
-        transform: scale(0.1)
-    };
-    100%{
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
 .msgbox p, .deletedsmgbox p {
     font-family: Geo, sans-serif;
     padding: 0px 10% 0px;
@@ -480,29 +410,8 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     border-bottom: 4px solid var(--blue);
     border-right: 0px solid;
     border-radius: 50%;
-    -webkit-animation: rotation2 0.5s infinite linear;
-    animation: rotation2 0.5s infinite linear;
-}
-
-@-webkit-keyframes rotation2 {
-    0%{
-        -webkit-transform: rotate(0);
-        transform: rotate(0)
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-    }
-}
-@keyframes rotation2 {
-    0%{
-        -webkit-transform: rotate(0);
-        transform: rotate(0)
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-    }
+    -webkit-animation: rotation 0.5s infinite linear;
+    animation: rotation 0.5s infinite linear;
 }
 
 @media(max-width: 820px) {

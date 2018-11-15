@@ -110,6 +110,28 @@
     }
 }
 
+@-webkit-keyframes rotatezoomin {
+    0%{
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    100%{
+        -webkit-transform: scale(1) rotate(-20deg);
+        transform: scale(1) rotate(-20deg)
+    }
+}
+
+@keyframes rotatezoomin {
+    0%{
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    100%{
+        -webkit-transform: scale(1) rotate(-20deg);
+        transform: scale(1) rotate(-20deg)
+    }
+}
+
 @-webkit-keyframes txtmovein {
     0% {
         font-size: 0vw;

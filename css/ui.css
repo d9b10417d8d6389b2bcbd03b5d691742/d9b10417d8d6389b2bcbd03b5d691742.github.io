@@ -243,18 +243,22 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     opacity: 0.2;
 }
 
-.oocicon {
-    background-image: url(../texture/cmdmachine.png);
-    background-size:contain;
+.pdecor {
     background-repeat: no-repeat;
-    margin-left: 20px;
-    width: 15%;
-    -webkit-animation: float 5s ease-in-out infinite;
-    animation: float 5s ease-in-out infinite;
+    background-size:contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    float: right;
+    margin-bottom: 20px;
 }
 
-.flex .oocdesc {
-    width: 80%;
+.pdecor[left] {
+    float: left;
+} 
+.pdecor[float] {
+    -webkit-animation: float 5s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
 .blackbottle {
@@ -362,8 +366,8 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 50px;
     -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
-    -webkit-animation: zoomin 0.3s ease-out;
-    animation: zoomin 0.3s ease-out;
+    -webkit-animation: rotatezoomin 0.3s ease-out;
+    animation: rotatezoomin 0.3s ease-out;
 }
 
 .msgbox p, .deletedsmgbox p {
@@ -418,6 +422,11 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     .cardwrapper{
         grid-template-columns: repeat(2, 1fr);
     }
+    .pdecor {
+        height: 100px;
+        width: 100px;
+    }
+
 }
 
 @media(max-width: 550px) {

@@ -270,9 +270,8 @@ nav {
 
 .darknavbar {
     --navbar-height: 80px;
-    background-color: var(--black);
-
 }
+
 .scrollcontent {
     margin-left: auto;
     margin-right: auto;
@@ -339,6 +338,10 @@ footer {
 @media(max-width: 786px) {
     header {
         margin-top: 65px;
+    }
+    
+    .darknavbar {
+        --navbar-height: 50px;
     }
     
     .menuicon {

@@ -3,6 +3,9 @@ button:focus, input[type="checkbox"]:focus, .commandbox:focus {
 }
 
 button, .acceptbox, .ivideo {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 } 
 
@@ -103,7 +106,9 @@ button:active::after{
 }
 
 button:active {
+    -webkit-transform: scale(0.95, 0.95);
     transform: scale(0.95, 0.95);
+    -webkit-transition: 0s;
     transition: 0s;
 }
 .checkboxdiv {

@@ -149,7 +149,10 @@ body::after{
     transition: 0.5s;
     -webkit-transition-delay: 0.5s;
     -o-transition-delay: 0.5s;
-       transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    -webkit-animation: zoomin 0.1s linear;
+    animation: zoomin 0.1s linear;
+    
 }
 .menuicon > div::before {
     content: "";
@@ -249,7 +252,7 @@ nav {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    transform: translateY(-50%);
     font-size: 5vw;
     height: 0;
     line-height: 0;
@@ -262,7 +265,7 @@ nav {
     top: 60%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    transform: translateY(-50%);
     font-size: 2vw;
     -webkit-animation: txtmovein 1s ease;
     animation: txtmovein 1s ease;

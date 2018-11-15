@@ -117,6 +117,8 @@ content ul, content ol {
     text-align: center;
 }
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
 }

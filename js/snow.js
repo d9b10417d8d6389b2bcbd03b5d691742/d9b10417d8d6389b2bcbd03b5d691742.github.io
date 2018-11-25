@@ -8,7 +8,7 @@ for (var i = 0; i < 60; i++) {
 	yr = Math.random() * window.innerHeight;
 	dxr = Math.random() - 0.5;
 	dyr = (Math.random() * 2) + 2;
-	r = (Math.random() * 4) + 5;
+	r = (Math.random() * 2) + 3;
     o = (Math.random() * 0.2);
 	particles.push(new Particle(xr, yr, dxr, dyr, r, o));
 }

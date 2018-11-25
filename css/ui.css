@@ -294,13 +294,9 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     overflow: hidden;
 }
 
-.card:hover {
-    -webkit-transform: translate(0px, -5px);
-    transform: translate(0px, -5px);
-}
-
 .card:hover .cardimgbox img {
-    opacity: 0.5;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .cardimgbox {
@@ -318,6 +314,10 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 .card h2 {
@@ -329,12 +329,12 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
-
+    margin-top: 30px;
 }
 
 .cardimgbox::after {
     content: attr(version);
-    background-color: var(--blue);
+    background-color: var(--black);
     position: absolute;
     top: 10px;
     right: -30px;

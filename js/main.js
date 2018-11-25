@@ -6,7 +6,7 @@ $(function() {
     $("body").css("background-position", "center " +(scTop * 0.8)+ "px");
     var date = new Date();
     var month = date.getMonth();
-    if (month === 10) {
+    if (month === 11) {
         $("body").prepend("<canvas id=\"backcanvas\"></canvas><script src=\"js/snow.js\"></script>");
     }   
 });

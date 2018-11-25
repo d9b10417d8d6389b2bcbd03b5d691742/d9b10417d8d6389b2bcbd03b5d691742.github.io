@@ -300,6 +300,7 @@ header {
     line-height: calc(400px + var(--navbar-height));
     -webkit-animation: day-night 20s ease infinite;
     animation: day-night 20s ease infinite;
+    position: relative;
 }
 .whitepage, .blackpage {
     position: relative;
@@ -323,6 +324,11 @@ header {
     padding: 0px 10% 30px;
     color: white;
     z-index: 0;
+}
+
+#backcanvas{
+    position: fixed;
+
 }
 
 footer {

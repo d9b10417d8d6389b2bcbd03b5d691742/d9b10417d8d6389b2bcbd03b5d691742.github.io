@@ -33,5 +33,5 @@ function dataLoader (xml) {
 };
 
 function notLoaded () {
-    OpenPage('404')
+    OpenPage('creations')
 }

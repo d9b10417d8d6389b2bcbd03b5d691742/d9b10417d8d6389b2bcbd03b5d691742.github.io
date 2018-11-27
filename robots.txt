@@ -1,3 +1,5 @@
 User-agent: Googlebot
 
 Disallow:
+
+sitemap: https://www.commandjam.tk/sitemap.xml

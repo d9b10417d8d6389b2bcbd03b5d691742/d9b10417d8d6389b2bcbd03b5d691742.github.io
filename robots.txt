@@ -1,5 +1,5 @@
-User-agent: Googlebot
-
-Disallow:
-
+User-agent: *
+Disallow: /privacypolicy
+Disallow: /creation
+Disallow: /404
 sitemap: https://www.commandjam.tk/sitemap.xml

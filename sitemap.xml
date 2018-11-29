@@ -11,19 +11,19 @@
   <loc>https://www.commandjam.tk/404.html</loc>
   <lastmod>2018-11-28</lastmod>
   <changefreq>monthly</changefreq>
-   <priority>1.0</priority>
+   <priority>0.5</priority>
  </url>
  <url>
   <loc>https://www.commandjam.tk/about.html</loc>
   <lastmod>2018-11-28</lastmod>
   <changefreq>monthly</changefreq>
-   <priority>1.0</priority>
+   <priority>0.8</priority>
  </url>
  <url>
   <loc>https://www.commandjam.tk/creation.html</loc>
   <lastmod>2018-11-28</lastmod>
   <changefreq>monthly</changefreq>
-   <priority>1.0</priority>
+   <priority>0.5</priority>
  </url>
  <url>
   <loc>https://www.commandjam.tk/creations.html</loc>
@@ -35,7 +35,7 @@
   <loc>https://www.commandjam.tk/faq.html</loc>
   <lastmod>2018-11-28</lastmod>
   <changefreq>monthly</changefreq>
-   <priority>1.0</priority>
+   <priority>0.8</priority>
  </url>
  <url>
   <loc>https://www.commandjam.tk/index.html</loc>
@@ -47,6 +47,6 @@
   <loc>https://www.commandjam.tk/privacypolicy.html</loc>
   <lastmod>2018-11-28</lastmod>
   <changefreq>monthly</changefreq>
-   <priority>1.0</priority>
+   <priority>0.5</priority>
  </url>
 </urlset>

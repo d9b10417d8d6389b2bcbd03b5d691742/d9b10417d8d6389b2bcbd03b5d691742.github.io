@@ -3,7 +3,7 @@ canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 var c = $("#backcanvas")[0].getContext('2d');
 var particles = [];
-for (var i = 0; i < 60; i++) {
+for (var i = 0; i < window.innerWidth/10; i++) {
 	xr = Math.random() * window.innerWidth;
 	yr = Math.random() * window.innerHeight;
 	dxr = Math.random() - 0.5;
@@ -26,6 +26,7 @@ function Particle(x, y, dx, dy, r, o) {
 		c.fill();
 	};
 	this.count = function() {
+		x += Math.sin(y/100);
 		x += dx;
 		y += dy;
 		if (y > window.innerHeight) {

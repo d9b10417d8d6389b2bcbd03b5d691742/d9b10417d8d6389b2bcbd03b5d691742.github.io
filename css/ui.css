@@ -270,7 +270,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     display: block;
     margin: auto;
     fill:var(--black);
-    stroke: var(--black);
     width: 100px;
     height: 100px;
     overflow: visible;

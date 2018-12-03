@@ -11,6 +11,9 @@ content a, .link {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
+content a, .link[light] {
+    color: var(--lightgray);
+}
 
 content a:hover , .link:hover{
     color: var(--blue);

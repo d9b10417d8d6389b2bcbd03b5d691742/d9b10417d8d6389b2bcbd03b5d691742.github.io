@@ -1,7 +1,8 @@
 :root {
     --black: #111215;
-    --blue: rgba(48, 107, 172, 1);
-    --gray: rgba(71, 68, 72, 1);
+    --blue: #306bac;
+    --gray: #474448;
+    --lightgray: #726f73;
     
     --navbar-height: 50px;
     --navbar-count: 4;

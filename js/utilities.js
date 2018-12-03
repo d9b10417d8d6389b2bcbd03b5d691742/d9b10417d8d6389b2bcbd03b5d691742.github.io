@@ -32,7 +32,7 @@ function Msg(msg, iconname) {
     if (!msgbox) {
         var icon = "";
         if(iconname == "copy") {
-            icon = "<i class='far fa-copy' style='color: gray'></i>";
+            icon = "<i class='far fa-copy' style='color: #726f73'></i>";
         };
         if(iconname == "no") {
             icon = "<i class='far fa-times-circle' style='color: darkred'></i>";

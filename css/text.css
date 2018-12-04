@@ -11,6 +11,7 @@ content a, .link {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
+
 content a[light] {
     color: var(--lightgray);
 }
@@ -30,12 +31,14 @@ content h3 {
     display: inline-block;
     width: 100%;
 }
+
 .blackpage h2, .whitepage h2 {
     font-size: 25px;
     color: var(--black);
     margin: 50px 0 0 0;
     width: 100%;
 }
+
 .blackpage h3 {
     color: white;
 }
@@ -72,6 +75,7 @@ content ul, content ol {
     transform: rotateZ(-45deg);
     background-color: darkred;
 }
+
 .lifalse::before {
     content: "";
     position: absolute;
@@ -84,6 +88,7 @@ content ul, content ol {
     transform: rotateZ(45deg);
     background-color: darkred;
 }
+
 .litrue::after {
     content: "";
     position: absolute;
@@ -97,6 +102,7 @@ content ul, content ol {
     transform: rotateZ(-45deg);
     background-color: limegreen;
 }
+
 .litrue::before {
     content: "";
     position: absolute;
@@ -125,6 +131,7 @@ content ul, content ol {
 .center{
     text-align: center;
 }
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -137,3 +144,18 @@ content ul, content ol {
         font-size: 30px;
     }
 }
+
+@media(max-width: 400px) {
+    content .fa-2x {
+        font-size: 7vw;
+    }
+}
+
+@media(max-width: 310px) {
+    content .fa-2x {
+        font-size: 35px;
+        display: block;
+        padding-top: 10px
+    }
+}
+    

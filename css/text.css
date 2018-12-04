@@ -11,7 +11,7 @@ content a, .link {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-content a, .link[light] {
+content a[light] {
     color: var(--lightgray);
 }
 

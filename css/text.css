@@ -61,6 +61,10 @@ content ul, content ol {
     display: inline-block;
     position: relative;
     margin-right: 50px;
+     margin-bottom: 20px;
+    width: 25%;
+    text-align: left;
+    line-height: 18px;
 }
 
 .lifalse::after {
@@ -142,6 +146,13 @@ content ul, content ol {
 @media(max-width: 786px) {
     content h3 {
         font-size: 30px;
+    }
+    .truefalselist li {
+        margin-right: 50px;
+        margin-bottom: 20px;
+        width: 50%;
+        text-align: center;
+        line-height: 18px;
     }
 }
 

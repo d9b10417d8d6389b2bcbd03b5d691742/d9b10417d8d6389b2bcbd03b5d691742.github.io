@@ -1,12 +1,14 @@
 $(function() {
     var URLtag = window.location.search.substring(1).split("=");
-    if (URLtag[0] == "") {
+    if (URLtag[0] == "id") {
         $.ajax({
             type: "GET",
             url: "xml/" + URLtag[1] + ".xml",
             success: dataLoader,
             error: notLoaded
         });
+    } else {
+        notLoaded();
     }
 });
 

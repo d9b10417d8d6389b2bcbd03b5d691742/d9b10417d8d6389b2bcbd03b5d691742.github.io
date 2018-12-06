@@ -1,13 +1,9 @@
 <content>
 
-<!--The names of xml files that hold OOC creations-->
-
 <xmlname>flappybird</xmlname>
 <xmlname>tamagotchi</xmlname>
 <xmlname>shootingstars</xmlname>
 <xmlname>copmlextrails</xmlname>
 <xmlname>xmasluckyblocks</xmlname>
-<xmlname>1</xmlname>
-<xmlname>2</xmlname>
 
 </content>

@@ -11,18 +11,17 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Geo|Rubik:900|Press+Start+2P|Anton" rel="stylesheet">
 		<title>CommandJam | Loading...</title>
 		
+        <meta name="description" content="">
 		<meta itemprop="name" content="CommandJam | Creation">
+        <meta itemprop="description" content="">
 		<meta itemprop="image" content="/texture/siteindex.jpg">
-        <meta name="keywords" content="minecraft, commandblock, creation, vanilla, only one command, programming, mc, website, commandjam, no mods, minecraft creation, vanilla mods, vanilla minecraft, mod, in minecraft, in vanilla minecraft, with commands, with commandblock, with only one command">
-		
-		<!-- Facebook Meta Tags -->
+
 		<meta property="og:url" content="/creation">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="CommandJam – Creation">
 		<meta property="og:description" content="A Minecraft 'Only One Command' creation by CommandJam.">
 		<meta property="og:image" content="/texture/siteindex.jpg">
 		
-		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="CommandJam – Creation">
 		<meta name="twitter:description" content="A Minecraft 'Only One Command' creation by CommandJam.">
@@ -69,6 +68,7 @@
                 </header>
                 <div class="whitepage">
                     
+                    <div class="allcontent" style="display: none">
                     <h3 class="ooctitle"></h3>
 
                     <div class="pdecor" style="background-image: url(../texture/cmdmachine.png);" float></div>
@@ -107,7 +107,7 @@
                     <button onclick="GetHelp()" class="gethelp">Help </button>
                     </div>
                     <div class="codeclaimspace">
-                         <div class="codeclaim">
+                         <div class="codeclaim" style="display: none">
                              <div>
                                  <button onclick="CopyCommand()">Copy To Clipboard</button>
                              </div>
@@ -115,10 +115,14 @@
                          </div>
                     </div>
                     
-                    <div class="help">
+                    <div class="help" style="display: none">
                     <h3>How To Install</h3>
                     <p>You need to have cheats enabled! Give yourself a command block in your world with "<span class="copyable" title="You can copy this with Ctrl + C.">/give&#x000A0;@p&#x000A0;command_block</span>", and place it down. Copy the command above with the "Copy To Clipboard" button and paste it into the command block (with Ctrl + V or Cmd + V). After activating it, you will have the module installed.</p>
                     </div>
+                    
+                </div>
+
+                <div class="spinner spinner2" style="top: 25px; position: relative"></div> 
                     
                 </div>
             </div>

@@ -143,7 +143,7 @@ input[type="checkbox"] {
     position: relative;
     fill:var(--blue);
     stroke: white;
-    stroke-width: 3px;
+    stroke-width: 4px;
     stroke-linecap: round;
     stroke-dasharray: 250%;
     stroke-dashoffset: -71%;
@@ -155,9 +155,9 @@ input[type="checkbox"] {
     left: -5px;
 }
 
-input[type="checkbox"]:hover + label .checkboxsvg {
+/*input[type="checkbox"]:hover + label .checkboxsvg {
     stroke-width: 5px;
-}
+}*/
 
 input[type="checkbox"]:checked + label .checkboxsvg {
     stroke-dasharray: 249%;

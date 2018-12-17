@@ -511,10 +511,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     transition: max-height 1s
 }
 
-.cc-revoke:hover {
-    text-decoration: underline
-}
-
 .cc-revoke,
 .cc-window {
     position: fixed;
@@ -532,7 +528,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     border-top: 5px solid white;
-    background-color: red;
 }
 
 
@@ -556,7 +551,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
 .cc-btn {
     white-space: nowrap;
     margin-left: .5em;
-    background-color: green;
 }
 
 .cc-close {

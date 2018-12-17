@@ -75,6 +75,21 @@
                     <p>There is nothing here, please go somewhere else. But don't worry, you can get a free cookie!</p>
                     <button onclick="GiveCookie()">Get Your Free Cookie!</button>
                     <a href="/" style="margin-left: 10px">Go&#x000A0;to&#x000A0;HOME&#x000A0;page</a>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
                     
                     <div class="freecookie" style="background-image: url(texture/cookie.png); height: 50px; width: 50px; background-repeat: no-repeat; background-size: contain; -ms-interpolation-mode: nearest-neighbor; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-pixelated; image-rendering: pixelated; position:relative; -webkit-animation: float 1.5s ease-in-out infinite; animation: float 1.5s ease-in-out infinite; margin: auto; display: none"><script>function GiveCookie() {$('.freecookie').slideDown()}</script></div>
                     

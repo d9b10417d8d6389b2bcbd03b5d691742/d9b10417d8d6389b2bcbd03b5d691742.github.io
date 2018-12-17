@@ -495,33 +495,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     width: 100%;
     -ms-flex-direction: row;
     flex-direction: row;
-}
-
-.cc-window.cc-invisible {
-    opacity: 0
-}
-
-.cc-animate.cc-revoke {
-    transition: transform 1s ease
-}
-
-.cc-animate.cc-revoke.cc-bottom {
-    transform: translateY(2em)
-}
-
-.cc-animate.cc-revoke.cc-active.cc-bottom,
-.cc-revoke:hover {
-    transform: translateY(0)
-}
-
-.cc-grower {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s
-}
-
-.cc-revoke,
-.cc-window {
     position: fixed;
     overflow: hidden;
     box-sizing: border-box;
@@ -539,57 +512,20 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     border-top: 5px solid white;
-}
-
-.cc-revoke {
-    padding: .5em
-}
-
-.cc-header {
     font-size: 18px;
-    font-weight: 700
+    font-weight: 700;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.cc-window.cc-invisible {
+    opacity: 0
 }
 
 .cc-btn {
     white-space: nowrap;
     margin-left: .5em;
 }
-
-.cc-close {
-    display: block;
-    position: absolute;
-    top: .5em;
-    right: .5em;
-    font-size: 1.6em;
-    opacity: .9;
-    line-height: .75
-}
-
-.cc-close:focus,
-.cc-close:hover {
-    opacity: 1
-}
-
-.cc-revoke.cc-bottom {
-    bottom: 0;
-    left: 3em;
-    border-top-left-radius: .5em;
-    border-top-right-radius: .5em
-}
-
-.cc-window.cc-banner {
-    -ms-flex-align: center;
-    align-items: center
-}
-
-.cc-banner .cc-message {
-    display: block;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    max-width: 100%;
-    margin-right: 1em
-}
-
 .cc-compliance {
     display: -ms-flexbox;
     display: flex;
@@ -599,14 +535,18 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     align-content: space-between
 }
 
+.cc-message {
+    display: block;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: 100%;
+    margin-right: 1em
+}
+
+
 @media screen and (max-width:414px) and (orientation:portrait),
 screen and (max-width:736px) and (orientation:landscape) {
-    .cc-window.cc-bottom {
-        bottom: 0
-    }
     .cc-window.cc-banner {
-        left: 0;
-        right: 0;
         -ms-flex-direction: column;
         flex-direction: column;
         -ms-flex-align: unset;

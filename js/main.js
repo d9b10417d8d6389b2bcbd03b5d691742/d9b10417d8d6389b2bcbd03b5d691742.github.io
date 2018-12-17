@@ -6,7 +6,7 @@ $(function () {
     });
     var scTop = $(window).scrollTop();
     holidaytheme();
-    cookieconsent();
+    cconsentcheck();
 });
 $(window).on("scroll", function () {
     var scTop = $(window).scrollTop();
@@ -17,7 +17,7 @@ $(window).on("scroll", function () {
     };
 });
 
-function cookieconsent() {
+function cconsentcheck() {
     window.cookieconsent.initialise({
         "palette": {
             "popup": {

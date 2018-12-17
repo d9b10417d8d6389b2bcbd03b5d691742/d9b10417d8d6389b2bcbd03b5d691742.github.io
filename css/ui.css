@@ -533,7 +533,9 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     z-index: 9999;
-    bottom: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
     -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.79);
     border-top: 5px solid white;
@@ -580,12 +582,6 @@ input[type="checkbox"]:checked + label .checkboxsvg {
     align-items: center
 }
 
-.cc-banner.cc-bottom {
-    left: 0;
-    right: 0;
-    bottom: 0
-}
-
 .cc-banner .cc-message {
     display: block;
     -ms-flex: 1 1 auto;
@@ -608,32 +604,21 @@ screen and (max-width:736px) and (orientation:landscape) {
     .cc-window.cc-bottom {
         bottom: 0
     }
-
     .cc-window.cc-banner {
         left: 0;
-        right: 0
-    }
-
-    .cc-window.cc-banner {
+        right: 0;
         -ms-flex-direction: column;
-        flex-direction: column
+        flex-direction: column;
+        -ms-flex-align: unset;
+        align-items: unset
     }
-
     .cc-window.cc-banner .cc-compliance {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto
     }
-
     .cc-window .cc-message {
-        margin-bottom: 1em
-    }
-
-    .cc-window.cc-banner {
-        -ms-flex-align: unset;
-        align-items: unset
-    }
-
-    .cc-window.cc-banner .cc-message {
+        margin-bottom: 1em;
         margin-right: 0
     }
+
 }

@@ -1,5 +1,5 @@
 /*Script of commandjam.tk
-Copyright © 2018 CommandJam - All Rights Reserved*/
+Copyright © 2019 CommandJam - All Rights Reserved*/
 var canvas = $("#backcanvas")[0];
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;

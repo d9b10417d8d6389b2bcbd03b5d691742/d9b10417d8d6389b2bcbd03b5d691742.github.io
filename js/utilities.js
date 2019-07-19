@@ -68,13 +68,27 @@ function CloseWarn() {
     $(".warn").slideUp(300).remove(300);
 }
 
+function HasParameter(name) {
+    return window.location.search.substring(1).includes(name);
+}
 
 
 
+function GetParameter(name){
+    var all = window.location.search.substring(1).split('&');
+    
+    
+    for (i = 0; i < all.length; i++) {
+        
+        var a = all[i].split('=');
+        
 
-
-
-
+        if (a[0] == name) {
+            return a[1];
+        }
+        return;
+    }
+}
 
 
 

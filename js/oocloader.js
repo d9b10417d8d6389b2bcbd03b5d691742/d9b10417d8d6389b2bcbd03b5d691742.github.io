@@ -40,6 +40,5 @@ function dataLoader(xml) {
 };
 
 function notLoaded() {
-    OpenPage('creations')
-    Warn("There is no project: ");
+    OpenPage('creations?loadfailed')
 }

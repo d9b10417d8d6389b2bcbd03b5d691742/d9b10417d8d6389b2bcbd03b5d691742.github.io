@@ -3,4 +3,4 @@ Disallow: /privacypolicy
 Disallow: /creation$
 Disallow: /404
 Disallow: /robots.txt
-sitemap: https://www.commandjam.tk/sitemap.xml
+Sitemap: https://www.commandjam.tk/sitemap.xml
